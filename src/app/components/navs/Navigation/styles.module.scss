@@ -1,0 +1,167 @@
+@use "../../../styles/base/variables" as *; // Global namespace
+@use "../../../styles/mixins/layout" as layout; // Namespaced
+
+@mixin custom-transition-opacity($duration) {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: $duration;
+}
+
+.navigation {
+  position: absolute;
+  z-index: 1000;
+  .navList {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style: none;
+      cursor: none;
+      .link {
+        font-size: 32px;
+        text-decoration: none;
+        color: black;
+        font-family: $interBold;
+        position: relative;
+        z-index: 1010;
+      }
+      .link::before {
+        content: "<";
+        color: $mintGreen;
+      }
+      .link::after {
+        content: ">";
+        color: $mintGreen;
+      }
+    }
+
+    li:not(:last-child) {
+      padding-bottom: 60px;
+    }
+    &.dark {
+      background-color: black;
+      li {
+        .link {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &.active {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  &.open {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+    .navList {
+      li {
+        .link {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Default
+// ==========================================================================
+
+@media (min-width: $breakMobile) {
+  .navigation {
+    display: none;
+    height: 500px;
+    .navList {
+      li {
+        .link {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Mobile Large
+// ==========================================================================
+
+@media (min-width: $breakLargeMobile) {
+  .navigation {
+    .navList {
+      li {
+        .link {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+
+@media (min-width: $breakTablet) {
+  .navigation {
+    .navList {
+      li {
+        .link {
+          font-size: 52px;
+        }
+      }
+      li:not(:last-child) {
+        padding-bottom: 65px;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: $breakDesktop) {
+  .navigation {
+    padding-top: 80px;
+    .navList {
+      justify-content: center;
+      li {
+        transition: all 0.2s ease-in-out;
+        .link {
+          font-size: 64px;
+        }
+      }
+      li:hover {
+        transform: scale(1.1);
+      }
+    }
+    &.active {
+      justify-content: center;
+    }
+    &.open {
+      align-items: center;
+    }
+  }
+}
+
+// ==========================================================================
+// HD
+// ==========================================================================
+@media (min-width: $breakHd) {
+  .navigation {
+    .navList {
+      li {
+        .link {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}

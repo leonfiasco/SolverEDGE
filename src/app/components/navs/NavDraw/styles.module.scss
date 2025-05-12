@@ -1,0 +1,108 @@
+@use "../../../styles/base/variables" as *; // Global namespace
+@use "../../../styles/mixins/layout" as layout; // Namespaced
+
+// .sideNav {
+//   display: none;
+// }
+
+// styles.module.scss for NavDraw
+.navDraw {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%; // Adjust width as needed
+  max-width: 400px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: block; // Ensure it's always in document flow
+  border: 2px solid red; // Test border
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .navWrap {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+// .isActive {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   z-index: 100;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   background-color: #111;
+//   overflow-x: hidden;
+//   transition: 0.5s;
+// }
+
+// ==========================================================================
+// Default
+// ==========================================================================
+
+@media (min-width: $breakMobile) {
+  // .isActive {
+  //   .navWrap {
+  //     display: flex;
+  //     justify-content: center;
+  //     position: relative;
+  //     width: 200px;
+  //     height: 450px;
+  //   }
+  // }
+}
+
+// ==========================================================================
+// Mobile Large
+// ==========================================================================
+
+@media (min-width: $breakLargeMobile) {
+  // .isActive {
+  //   .navWrap {
+  //     width: 265px;
+  //   }
+  // }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+
+@media (min-width: $breakTablet) {
+  // .isActive {
+  //   .navWrap {
+  //     width: 385px;
+  //   }
+  // }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: $breakDesktop) {
+  // .isActive {
+  //   .navWrap {
+  //     width: 415px;
+  //   }
+  // }
+}
+
+// ==========================================================================
+// HD
+// ==========================================================================
+@media (min-width: $breakHd) {
+  // .isActive {
+  //   .navWrap {
+  //     width: 555px;
+  //   }
+  // }
+}

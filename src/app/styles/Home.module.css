@@ -1,0 +1,129 @@
+.main {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.main .navigation {
+  display: none;
+}
+.main .navigation .navList {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .navigation .navList li {
+  list-style: none;
+  cursor: pointer;
+}
+.main .navigation .navList li a {
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+  font-family: "interBold";
+}
+.main .navigation .navList li a::before {
+  content: "<";
+  color: #22c196;
+}
+.main .navigation .navList li a::after {
+  content: ">";
+  color: #22c196;
+}
+.main .navigation .navList li:not(:last-child) {
+  padding-bottom: 35px;
+}
+.main .navigation.active {
+  display: block;
+}
+.main.dark {
+  background-color: black;
+}
+.main.dark .textBtnWrap p {
+  color: white;
+}
+
+@media (min-width: 0) {
+  .main {
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .main .textBtnWrap {
+    display: none;
+  }
+  .main .navigation {
+    display: none;
+  }
+  .main .navigation .navList li a {
+    font-size: 32px;
+  }
+}
+@media (min-width: 740px) {
+  .main {
+    padding-top: 30px;
+  }
+  .main .navigation .navList li a {
+    font-size: 42px;
+  }
+  .main .navigation .navList li:not(:last-child) {
+    padding-bottom: 45px;
+  }
+}
+@media (min-width: 1020px) {
+  .main {
+    padding-top: 40px;
+    flex-direction: column;
+  }
+  .main .textBtnWrap {
+    display: block;
+    padding-left: 50px;
+  }
+  .main .textBtnWrap .introText {
+    display: block;
+    margin-bottom: 60px;
+  }
+  .main .textBtnWrap .introText p {
+    margin: 0;
+    font-family: "interLite";
+    font-size: 22px;
+  }
+  .main .textBtnWrap .btn {
+    cursor: pointer;
+    font-family: "interLite";
+    background-color: #22c196;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    height: 60px;
+    width: 150px;
+  }
+  .main .navigation .navList li {
+    transition: all 0.2s ease-in-out;
+  }
+  .main .navigation .navList li a {
+    font-size: 52px;
+  }
+  .main .navigation .navList li:hover {
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 1460px) {
+  .main {
+    padding-top: 55px;
+  }
+  .main .textBtnWrap {
+    padding-left: 120px;
+  }
+  .main .navigation .navList li a {
+    font-size: 62px;
+    transition: all 0.2s ease-in-out;
+  }
+  .main .navigation .navList li a:hover {
+    transform: scale(1.1);
+  }
+} /*# sourceMappingURL=Home.module.css.map */
