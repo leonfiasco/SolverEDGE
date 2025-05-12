@@ -1,0 +1,177 @@
+// ==========================================================================
+// Ent Base _variables config
+// ==========================================================================
+// Corrected import paths
+@use "./styles/base/variables" as *;
+@use "./styles/mixins/index" as mixins; // Updated path
+// @use "./styles/base/_fonts";
+
+// ==========================================================================
+// Mobile
+// ==========================================================================
+// Body Rests
+body {
+  // font-family: $baseFontFamily;
+  // color: $baseFontColor;
+  // font-weight: $baseFontWeight;
+  background: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: $interReg;
+}
+
+// @include links();
+
+// @include noScroll();
+
+#__next {
+  overflow: hidden;
+}
+
+// ==========================================================================
+// Sliders
+// ==========================================================================
+
+.noUi-horizontal {
+  height: 1px;
+  .noUi-handle {
+    background: #fff;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: none;
+    right: -4px;
+    top: -4px;
+    box-shadow: none;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.noUi-target {
+  border: none;
+  background: #fff;
+}
+
+.noUi-connect {
+  background: #fff;
+}
+
+.used {
+  .noUi-horizontal {
+    .noUi-handle {
+      background: #000;
+    }
+  }
+  .noUi-target {
+    background: #fff;
+  }
+  .noUi-connect {
+    background: #000;
+  }
+}
+
+// ==========================================================================
+// Mobile
+// ==========================================================================
+@media (min-width: $breakMobile) {
+  // @include global-type-setting(
+  //   $baseFontSize,
+  //   // 11
+  //   $baseLineHeight,
+  //   // 16
+  //   $baseLetterSpacingSize
+  // );
+
+  main {
+    min-height: calc(100vh - 560px);
+    padding-top: 100px;
+    // background-attachment: fixed !important;
+  }
+}
+
+// ==========================================================================
+// Large Mobile
+// ==========================================================================
+@media (min-width: $breakLargeMobile) {
+  // @include global-type-setting(
+  //   $baseFontSize + 1,
+  //   // 12
+  //   $baseLineHeight + 2,
+  //   //18
+  //   $baseLetterSpacingSize
+  // );
+
+  main {
+    min-height: calc(100vh - 662px);
+    padding-top: 100px;
+    // // padding-bottom: 300px;
+  }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+@media (min-width: $breakTablet) {
+  // @include global-type-setting(
+  //   $baseFontSize + 3,
+  //   // 14
+  //   $baseLineHeight + 5,
+  //   // 21
+  //   $baseLetterSpacingSize
+  // );
+
+  main {
+    min-height: calc(100vh - 372px);
+    padding-top: 105px;
+    // padding-bottom: 275px;
+  }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: $breakDesktop) {
+  // @include global-type-setting(
+  //   $baseFontSize + 5,
+  //   // 16
+  //   $baseLineHeight + 8,
+  //   // 24
+  //   $baseLetterSpacingSize
+  // );
+
+  main {
+    min-height: calc(100vh - 445px);
+    padding-top: 180px;
+    // padding-bottom: 600px;
+  }
+}
+
+// ==========================================================================
+// HD Desktop
+// ==========================================================================
+@media (min-width: $breakHd) {
+  // @include global-type-setting(
+  //   $baseFontSize + 7,
+  //   // 18
+  //   $baseLineHeight + 12,
+  //   // 28
+  //   $baseLetterSpacingSize
+  // );
+
+  main {
+    min-height: calc(100vh - 512px);
+    padding-top: 200px;
+    // padding-bottom: 9505px;
+  }
+}

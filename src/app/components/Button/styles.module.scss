@@ -1,41 +1,13 @@
-@import "./base/_variables";
-@import "./base/fonts";
-@import "./mixins/helpers";
-@import "../styles/base/variables";
-@import "../styles/mixins/layout";
-// ==========================================================================
-// Mobile
-// ==========================================================================
+@use "../../styles/base/variables" as *; // Global namespace
+@use "../../styles/mixins/layout" as layout; // Namespaced
 
-// Body Rests
-
-body,
-html,
-* {
-  cursor: none;
-}
-
-body,
-html {
-  // font-family: $baseFontFamily;
-  // background-color: black;
-  // height: 100%;
-  // width: 100%;
-  color: $baseFontColor;
-  font-weight: $baseFontWeight;
-  // position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $interBold;
+.button {
+  background-color: $shoreBlue;
+  border: none;
+  border-radius: 25px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #fff;
 }
 
 // ==========================================================================
@@ -43,6 +15,9 @@ h6 {
 // ==========================================================================
 
 @media (min-width: $breakMobile) {
+  .button {
+    padding: 8px 12px;
+  }
 }
 
 // ==========================================================================
@@ -50,6 +25,9 @@ h6 {
 // ==========================================================================
 
 @media (min-width: $breakLargeMobile) {
+  .button {
+    padding: 9px 12px;
+  }
 }
 
 // ==========================================================================
@@ -57,9 +35,9 @@ h6 {
 // ==========================================================================
 
 @media (min-width: $breakTablet) {
-  body,
-  html {
-    overflow: hidden;
+  .button {
+    padding: 10px 14px;
+    font-size: 15px;
   }
 }
 
@@ -67,10 +45,18 @@ h6 {
 // Desktop
 // ==========================================================================
 @media (min-width: $breakDesktop) {
+  .button {
+    padding: 12px 16px;
+    font-size: 18px;
+  }
 }
 
 // ==========================================================================
 // HD
 // ==========================================================================
 @media (min-width: $breakHd) {
+  .button {
+    padding: 14px 18px;
+    font-size: 20px;
+  }
 }

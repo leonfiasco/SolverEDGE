@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import "./globals.css";
+import "./globals.scss";
 import { SiteHeader } from "./components";
 import { ThemeProvider } from "./store/ThemeContext"; // Adjust the import path as needed
 

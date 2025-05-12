@@ -18,8 +18,8 @@ const SiteHeader = (): JSX.Element => {
     setNavDrawOpen(!navDrawOpen);
   };
   return (
-    <header className={styles.siteHeader} role="banner">
-      <nav className={styles.navbar} aria-label="Main navigation">
+    <header className={styles.siteHeader}>
+      <nav className={styles.navbar}>
         <div className={styles.navbarContainer}>
           <div className={styles.logoContainer}>
             <Link

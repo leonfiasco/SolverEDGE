@@ -106,12 +106,9 @@
 // ==========================================================================
 @media (min-width: $breakDesktop) {
   .burgerWrap {
+    display: none;
     .burgerContainer {
       display: none;
-    }
-
-    .mainMenu {
-      display: flex;
     }
   }
 }
