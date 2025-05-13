@@ -1,0 +1,111 @@
+// @use "sass:map";
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/base/variables" as var;
+@use "../../styles/mixins/typography" as *;
+
+// ==========================================================================
+// Default
+// // ==========================================================================
+
+.container {
+  width: 100%;
+}
+
+.heroTextWrap {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  color: var(--navBlue);
+
+  .inlineBlock {
+    display: inline-block;
+    white-space: normal;
+  }
+
+  .underlineContainer {
+    display: inline-flex;
+    gap: 0.25em;
+
+    .underlinedWord {
+      position: relative;
+      display: inline-block;
+
+      .underlineSvg {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.secondSubTxt {
+  max-width: 600px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .btnWrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Responsive adjustments
+// @media (max-width: 768px) {
+//   .title {
+//     white-space: normal;
+//     flex-direction: column;
+//     align-items: center;
+
+//     .inlineBlock, .underlineContainer {
+//       display: block;
+//       text-align: center;
+//     }
+
+//     .underlineContainer {
+//       justify-content: center;
+//       margin: 0.5rem 0;
+//     }
+//   }
+// }
+
+@media (min-width: var.$breakMobile) {
+}
+
+// ==========================================================================
+// Mobile Large
+// ==========================================================================
+
+@media (min-width: var.$breakLargeMobile) {
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+
+@media (min-width: var.$breakTablet) {
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: var.$breakDesktop) {
+}
+
+// ==========================================================================
+// HD
+// ==========================================================================
+@media (min-width: var.$breakHd) {
+}

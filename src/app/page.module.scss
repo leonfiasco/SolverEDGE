@@ -7,20 +7,92 @@
 .home {
   padding: 0;
   .container {
+    .svgWrap {
+      position: relative;
+      .cross,
+      .square,
+      .triangle,
+      .squiggle {
+        position: absolute;
+        width: 40px;
+        height: 70px;
+      }
+
+      .squiggle {
+        position: absolute;
+        width: 100px;
+        height: 70px;
+      }
+
+      .thinkingMan {
+        border: 2px solid red;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: 20px;
+        display: none;
+      }
+    }
+  }
+
+  .videoSection {
+    @include layout.containerResponsiveNew($containerFull: false);
     .heroTextWrap {
-      @include layout.containerResponsiveNew($containerFull: false);
       .title {
+        white-space: nowrap; // Prevent line breaks
+        display: flex;
+        flex-wrap: wrap; // Allow wrapping if needed
+        align-items: baseline; // Align text baselines
         color: $navBlue;
+        .inlineBlock {
+          display: inline-block;
+          white-space: normal; // Allow text wrapping inside these spans
+          .underlinedWord {
+            position: relative;
+            display: inline-block;
+
+            .underlineSvg {
+              position: absolute;
+              bottom: 0px; // Adjust underline position
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .underlineContainer {
+          display: inline-flex;
+          gap: 0.25em; // Small gap between words
+
+          .underlinedWord {
+            position: relative;
+            display: inline-block;
+
+            .underlineSvg {
+              position: absolute;
+              bottom: 0px; // Adjust underline position
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
       }
-      .underlineItem {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        padding-bottom: 4px; /* Space for underline */
-        color: $navBlue; /* Text color */
+    }
+    .secondSubTxt {
+      .btnWrap {
+        display: flex;
+        justify-content: center;
       }
-      .subText {
-        color: $navBlue; /* Text color */
+    }
+
+    .svgWrap {
+      display: flex;
+      justify-content: center;
+      .arrowDown {
+        width: 40px;
+        height: 70px;
       }
     }
   }
@@ -32,20 +104,91 @@
 
 @media (min-width: var.$breakMobile) {
   .container {
-    .heroTextWrap {
-      padding-top: 20px;
-      .title {
-        // border: 2px solid blue;
-        @include item-type-setting(24, 40, 0);
+    .svgWrap {
+      .cross,
+      .square,
+      .triangle {
+        width: 40px;
+        height: 70px;
+      }
+
+      .cross {
+        top: -240px;
+        right: 20px;
+      }
+
+      .square {
+        top: -215px;
+      }
+
+      .triangle {
+        bottom: -75px;
+      }
+
+      .squiggle {
+        bottom: -45px;
+        right: 20px;
+        width: 100px;
+        height: 70px;
+      }
+
+      // .thinkingMan {
+      //   display: none;
+      // }
+    }
+  }
+
+  .videoSection {
+    padding-top: 60px;
+    .title {
+      white-space: nowrap; // Prevent line breaks
+      display: flex;
+      flex-wrap: wrap; // Allow wrapping if needed
+      align-items: baseline; // Align text baselines
+
+      .inlineBlock {
+        display: inline-block;
+        white-space: normal; // Allow text wrapping inside these spans
+        .underlinedWord {
+          position: relative;
+          display: inline-block;
+
+          .underlineSvg {
+            position: absolute;
+            bottom: -4px; // Adjust underline position
+            left: 0;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .underlineContainer {
+        display: inline-flex;
+        gap: 0.25em; // Small gap between words
+
+        .underlinedWord {
+          position: relative;
+          display: inline-block;
+
+          .underlineSvg {
+            position: absolute;
+            bottom: -4px; // Adjust underline position
+            left: 0;
+            width: 100%;
+            height: auto;
+          }
+        }
       }
     }
 
-    .cross {
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      width: 40px;
-      height: 70px;
+    .svgWrap {
+      padding-top: 55px;
+      padding-bottom: 30px;
+      .arrowDown {
+        width: 40px;
+        height: 70px;
+      }
     }
   }
 }
@@ -55,9 +198,34 @@
 // ==========================================================================
 
 @media (min-width: var.$breakLargeMobile) {
-  .heroTextWrap {
-    .title {
-      @include item-type-setting(26, 40, 0);
+  .container {
+    .svgWrap {
+      .cross,
+      .square,
+      .triangle {
+        width: 65px;
+        height: 70px;
+      }
+
+      .cross {
+        top: 50px;
+        right: 20px;
+      }
+
+      .square {
+        top: 85px;
+      }
+
+      .triangle {
+        bottom: -115px;
+      }
+
+      .squiggle {
+        bottom: -60px;
+        right: 20px;
+        width: 120px;
+        height: 90px;
+      }
     }
   }
 }
@@ -67,9 +235,15 @@
 // ==========================================================================
 
 @media (min-width: var.$breakTablet) {
-  .heroTextWrap {
-    .title {
-      @include item-type-setting(32, 50, 0);
+  .container {
+    .svgWrap {
+      .thinkingMan {
+        display: block;
+        border: 2px solid red;
+        width: 200px;
+        height: 200px;
+        right: 20px;
+      }
     }
   }
 }
@@ -78,10 +252,19 @@
 // Desktop
 // ==========================================================================
 @media (min-width: var.$breakDesktop) {
-  .heroTextWrap {
-    .title {
-      // padding-left: 40px;
-      @include item-type-setting(42, 60, 0);
+  .container {
+    .svgWrap {
+      .cross,
+      .square,
+      .triangle {
+        width: 112px;
+        height: 100px;
+      }
+
+      .squiggle {
+        width: 190px;
+        height: 100px;
+      }
     }
   }
 }
@@ -90,9 +273,6 @@
 // HD
 // ==========================================================================
 @media (min-width: var.$breakHd) {
-  .heroTextWrap {
-    .title {
-      @include item-type-setting(52, 74, 0);
-    }
+  .container {
   }
 }

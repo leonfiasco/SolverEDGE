@@ -1,0 +1,139 @@
+// @use "sass:map";
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/base/variables" as var;
+@use "../../styles/mixins/typography" as *;
+
+.heroTextWrap {
+  @include layout.containerResponsiveNew($containerFull: false);
+  .title {
+    color: $navBlue;
+  }
+  .underlineItem {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 4px; /* Space for underline */
+    color: $navBlue; /* Text color */
+  }
+  .subText {
+    color: $navBlue; /* Text color */
+  }
+}
+
+.underlineContainer {
+  display: inline-flex;
+  gap: 0.5em; // Space between words
+}
+
+.underlinedWord {
+  position: relative;
+  display: inline-block;
+
+  .underlineSvg {
+    position: absolute;
+  }
+}
+
+// ==========================================================================
+// Default
+// // ==========================================================================
+
+@media (min-width: var.$breakMobile) {
+  .heroTextWrap {
+    padding-top: 50px;
+    .title {
+      @include item-type-setting(24, 20, 0);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .titleLine {
+        display: block;
+      }
+
+      .underlineContainer {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      .underlinedWord {
+        position: relative;
+        /* Underline styles */
+      }
+    }
+
+    .subText {
+      @include item-type-setting(14, 20, 0);
+    }
+
+    .underlineSvg {
+      bottom: -8px; // Adjust based on your SVG height
+      left: 0;
+      width: 100%;
+      height: 17px;
+    }
+  }
+}
+
+// ==========================================================================
+// Mobile Large
+// ==========================================================================
+
+@media (min-width: var.$breakLargeMobile) {
+  .heroTextWrap {
+    .title {
+      @include item-type-setting(26, 40, 0);
+    }
+
+    .subText {
+      @include item-type-setting(16, 20, 0);
+    }
+  }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+
+@media (min-width: var.$breakTablet) {
+  .heroTextWrap {
+    .title {
+      @include item-type-setting(32, 50, 0);
+    }
+
+    .subText {
+      @include item-type-setting(18, 20, 0);
+    }
+  }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: var.$breakDesktop) {
+  .heroTextWrap {
+    .title {
+      @include item-type-setting(42, 60, 0);
+    }
+
+    .subText {
+      @include item-type-setting(22, 20, 0);
+    }
+  }
+}
+
+// ==========================================================================
+// HD
+// ==========================================================================
+@media (min-width: var.$breakHd) {
+  .heroTextWrap {
+    .title {
+      @include item-type-setting(52, 74, 0);
+    }
+
+    .subText {
+      @include item-type-setting(26, 20, 0);
+    }
+  }
+}
