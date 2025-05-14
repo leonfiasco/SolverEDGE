@@ -9,7 +9,10 @@ import {
   Triangle,
   Underline,
   YoutubeVideo,
+  Quote,
 } from "./components";
+import { GRAPH_IMAGE1, GRAPH_IMAGE2 } from "@/utils/images";
+import Image from "next/image";
 
 import styles from "./page.module.scss";
 
@@ -69,6 +72,32 @@ export default function Home() {
           <ArrowDown className={styles.arrowDown} />
         </div>
         <YoutubeVideo videoId={"AgPnZdM1ASI"} />
+        <Quote className={styles.customColor}>
+          <p>
+            Strong performance in these skills enhance academics, critical
+            thinking, patience and resilience
+          </p>
+        </Quote>
+      </section>
+      <section className={styles.graphImages}>
+        <div>
+          <Image
+            src={GRAPH_IMAGE1}
+            alt="Problem solving capabilities graph"
+            width={500} // set appropriate dimensions
+            height={300}
+            className={styles.graphImage1}
+          />
+        </div>
+        <div>
+          <Image
+            src={GRAPH_IMAGE2}
+            alt="Problem solving capabilities graph"
+            width={500} // set appropriate dimensions
+            height={300}
+            className={styles.graphImage2}
+          />
+        </div>
       </section>
     </main>
   );

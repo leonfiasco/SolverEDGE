@@ -4,6 +4,7 @@ import Button from "./Button";
 import HeroText from "./HeroText";
 import SecondHeroText from "./SecondHeroText";
 import YoutubeVideo from "./YoutubeVideo";
+import Quote from "./Quote";
 
 // SVGs
 import Cross from "./svgs/Cross";
@@ -13,6 +14,8 @@ import Squiggle from "./svgs/Squiggle";
 import ThinkingMan from "./svgs/ThinkingMan";
 import Underline from "./svgs/Underline";
 import ArrowDown from "./svgs/ArrowDown";
+import QuoteLeft from "./svgs/QuoteLeft";
+import QuoteRight from "./svgs/QuoteRight";
 
 export {
   SiteHeader,
@@ -21,6 +24,7 @@ export {
   HeroText,
   SecondHeroText,
   YoutubeVideo,
+  Quote,
   // SVGs
   Cross,
   Triangle,
@@ -29,4 +33,6 @@ export {
   ThinkingMan,
   Underline,
   ArrowDown,
+  QuoteRight,
+  QuoteLeft,
 };

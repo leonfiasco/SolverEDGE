@@ -8,6 +8,8 @@
   @include layout.containerResponsiveNew($containerFull: false);
   .title {
     color: $navBlue;
+    font-family: "Inter";
+    font-weight: 700;
   }
   .underlineItem {
     position: relative;
@@ -18,6 +20,8 @@
   }
   .subText {
     color: $navBlue; /* Text color */
+    font-family: "Inter";
+    font-weight: 400;
   }
 }
 

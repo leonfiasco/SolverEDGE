@@ -10,76 +10,68 @@
 
 .container {
   width: 100%;
-}
 
-.heroTextWrap {
-  margin-bottom: 1.5rem;
-}
-
-.title {
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  color: var(--navBlue);
-
-  .inlineBlock {
-    display: inline-block;
-    white-space: normal;
+  .heroTextWrap {
+    margin-bottom: 1.5rem;
   }
 
-  .underlineContainer {
-    display: inline-flex;
-    gap: 0.25em;
+  .title {
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    color: $navBlue;
+    font-family: "Inter";
+    font-weight: 700;
+    border: 2px solid blue;
 
-    .underlinedWord {
-      position: relative;
+    .inlineBlock {
       display: inline-block;
+      white-space: normal;
+      font-family: inherit; // Inherits from .title
+      font-weight: inherit;
+    }
 
-      .underlineSvg {
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: auto;
+    .underlineContainer {
+      display: inline-flex;
+      gap: 0.25em;
+
+      .underlinedWord {
+        position: relative;
+        display: inline-block;
+        font-family: inherit;
+        font-weight: inherit;
+
+        .underlineSvg {
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
-}
 
-.secondSubTxt {
-  max-width: 600px;
-  margin: 0 auto;
+  .secondSubTxt {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid red;
+    p {
+      font-family: "Inter";
+      font-weight: 400;
+      color: $navBlue;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      font-size: 1.125rem;
+    }
 
-  p {
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+    .btnWrap {
+      display: flex;
+      justify-content: center;
+    }
   }
-
-  .btnWrap {
-    display: flex;
-    justify-content: center;
-  }
 }
-
-// Responsive adjustments
-// @media (max-width: 768px) {
-//   .title {
-//     white-space: normal;
-//     flex-direction: column;
-//     align-items: center;
-
-//     .inlineBlock, .underlineContainer {
-//       display: block;
-//       text-align: center;
-//     }
-
-//     .underlineContainer {
-//       justify-content: center;
-//       margin: 0.5rem 0;
-//     }
-//   }
-// }
 
 @media (min-width: var.$breakMobile) {
 }

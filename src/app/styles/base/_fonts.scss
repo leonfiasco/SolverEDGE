@@ -1,74 +1,23 @@
 @font-face {
   font-family: "interLite";
-  src: url("../../static/fonts/inter_Light.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/fonts/inter_Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "interReg";
-  src: url("../../static/fonts/inter_Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/fonts/inter_Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "interBold";
-  src: url("../../static/fonts/inter_Bold.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/fonts/inter_Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-
-// @font-face {
-// 	font-family: 'interReg';
-// 	src: url('../../static/fonts/avenir/Avenir-Regular.woff2') format('woff2');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'avenirDemi';
-// 	src: url('../../static/fonts/avenir/AvenirNext-Demi.otf') format('opentype');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'interBold';
-// 	src: url('../../static/fonts/avenir/Avenir-Bold.ttf') format('truetype');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'avenirBlk';
-// 	src: url('../../static/fonts/avenir/Avenir-Black.woff2') format('opentype');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'dkLemon';
-// 	src: url('../../static/fonts/dk/DK-LemonYellowSun.otf') format('opentype');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
