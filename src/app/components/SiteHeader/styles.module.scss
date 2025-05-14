@@ -5,45 +5,46 @@
 // Default
 // ==========================================================================
 
-.siteHeader {
-  background-color: #ffffff;
-  z-index: 100;
-  width: 100%; // Ensure full width
-  // overflow: hidden; // Contain children
-
-  .navbar {
-    width: 100%;
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  display: flex;
+  .logo {
+    height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    .logoContainer {
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
 
-    .navbarContainer {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      .logoLink {
+        text-decoration: none;
+        color: black;
+      }
+      &.active {
+        position: relative;
+        z-index: 1000;
+        .logoLink {
+          color: white;
+        }
+      }
+
+      .logoImage {
+        width: auto; // Allow CSS to control width
+        height: auto; // Allow CSS to control height
+        object-fit: contain; // Ensure proper scaling
+      }
     }
   }
-
-  .logoContainer {
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .logoImage {
-      width: auto; // Allow CSS to control width
-      height: auto; // Allow CSS to control height
-      object-fit: contain; // Ensure proper scaling
-    }
-  }
-
   .navMenu {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1.5rem;
+    // gap: 1.5rem;
   }
 
   .navItem {
@@ -53,73 +54,20 @@
     font-weight: 400;
     display: none;
   }
+}
 
-  .navLink {
-    color: $navBlue;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
+// ==========================================================================
+// Default
+// ==========================================================================
+@media (min-width: $breakMobile) {
+  .navbar {
+    justify-content: space-between;
 
-    &:hover {
-      color: #3498db;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #3498db;
-      transition: width 0.3s ease;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-
-    &.active {
-      color: #3498db;
-      font-weight: 600;
-
-      &::after {
-        width: 100%;
-      }
+    .navMenu {
+      display: flex;
     }
   }
 }
-
-@media (max-width: $breakMobile) {
-  .siteHeader {
-    .navbar {
-      // padding: 0 1rem;
-      // width: 100vw;
-      box-sizing: border-box;
-
-      // &Container {
-      //   max-width: 100vw;
-      //   overflow-x: hidden;
-      // }
-
-      .logoContainer {
-        .logoImage {
-          max-width: 100px; // Adjust as needed
-          height: auto;
-        }
-      }
-
-      .navMenu {
-        // gap: 0.5rem; // Reduce gap on mobile
-        // flex-wrap: wrap; // Allow items to wrap
-      }
-    }
-  }
-}
-
 // ==========================================================================
 // Mobile Large
 // ==========================================================================
@@ -132,14 +80,6 @@
 // ==========================================================================
 
 @media (min-width: $breakTablet) {
-  .navbar {
-    .logoContainer {
-      .logoImage {
-        width: 145px;
-        height: 75px;
-      }
-    }
-  }
 }
 
 // ==========================================================================
@@ -147,27 +87,8 @@
 // ==========================================================================
 @media (min-width: $breakDesktop) {
   .navbar {
-    padding: 10px;
-
-    .logoContainer {
-      .logoImage {
-        width: 155px;
-        height: 75px;
-      }
-    }
-
-    .navMenu {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .navItem {
-        display: block;
-        .userIcon {
-          height: 30px;
-          width: 30px;
-        }
-      }
-    }
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 

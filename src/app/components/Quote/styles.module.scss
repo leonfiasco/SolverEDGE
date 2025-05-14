@@ -57,6 +57,10 @@
 
 // Mobile Large
 @media (min-width: var.$breakLargeMobile) {
+  .quoteContainer {
+    margin: unset;
+  }
+
   .quoteMarkLeft,
   .quoteMarkRight {
     width: 20px;
@@ -64,7 +68,7 @@
   }
 
   .quoteContent {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 

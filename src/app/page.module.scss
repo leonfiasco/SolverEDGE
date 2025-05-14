@@ -7,6 +7,18 @@
 .home {
   padding: 0;
   .container {
+    .thinkingMan {
+      position: relative; // Required for Next.js fill prop
+      // padding-bottom: 100%; // Creates a square (1:1) aspect ratio
+      // display: none; // Default hidden on mobile
+
+      .thinkingMan {
+        // position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
     .svgWrap {
       position: relative;
       .cross,
@@ -22,15 +34,6 @@
         position: absolute;
         width: 100px;
         height: 70px;
-      }
-
-      .thinkingMan {
-        border: 2px solid red;
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        right: 20px;
-        display: none;
       }
     }
   }
@@ -127,11 +130,13 @@
       }
 
       .square {
-        top: -215px;
+        top: -225px;
+        left: 20px;
       }
 
       .triangle {
         bottom: -75px;
+        left: 20px;
       }
 
       .squiggle {
@@ -210,15 +215,29 @@
   }
 
   .graphImages {
-    div {
-      .graphImage1 {
-        width: 300px;
-        height: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; // Space between images
+    width: 100%;
+
+    .test {
+      position: relative; // Required for Next.js Image fill
+      width: 100%; // Take full available width
+      height: 0; // Let padding control height
+      padding-bottom: 30%; // Aspect ratio (adjust as needed)
+
+      // For graphImage2 (taller aspect ratio)
+      &:nth-child(2) {
+        padding-bottom: 60%; // Different aspect ratio
       }
-      .graphImage2 {
-        width: 300px;
-        height: 304px;
-      }
+    }
+
+    .graphImage1,
+    .graphImage2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Maintain aspect ratio
     }
   }
 }
@@ -238,23 +257,58 @@
       }
 
       .cross {
-        top: 50px;
-        right: 20px;
+        top: -220px;
+        right: 60px;
       }
 
       .square {
-        top: 85px;
+        top: -250px;
       }
 
       .triangle {
         bottom: -115px;
+        width: 50px;
+        height: 70px;
       }
 
       .squiggle {
         bottom: -60px;
         right: 20px;
-        width: 120px;
+        width: 150px;
         height: 90px;
+      }
+    }
+  }
+
+  .videoSection {
+    padding-top: 100px;
+    .heroTextWrap {
+      .title {
+        justify-content: center;
+      }
+    }
+
+    .secondSubTxt {
+      p {
+        text-align: center;
+      }
+    }
+
+    .arrowDown {
+      width: 45px;
+      height: 85px;
+    }
+  }
+
+  .graphImages {
+    div {
+      .graphImage1 {
+        width: 480px;
+        height: 120px;
+      }
+      .graphImage2 {
+        width: 486px;
+        height: 308px;
       }
     }
   }
@@ -266,13 +320,60 @@
 
 @media (min-width: var.$breakTablet) {
   .container {
+    height: 500px;
     .svgWrap {
-      .thinkingMan {
-        display: block;
-        border: 2px solid red;
-        width: 200px;
-        height: 200px;
-        right: 20px;
+      .triangle {
+        bottom: 550px !important;
+        left: 415px !important;
+        width: 60px !important;
+      }
+      .cross {
+        top: -615px;
+        width: 55px !important;
+      }
+
+      .square {
+        left: 315px !important;
+        width: 60px !important;
+      }
+
+      .squiggle {
+        bottom: 165px !important;
+        width: 125px !important;
+      }
+    }
+    .thinkingMan {
+      display: block;
+      position: absolute;
+      top: -230px;
+      left: 385px;
+      width: 350px;
+      height: 350px;
+      padding-bottom: 0;
+    }
+  }
+
+  .videoSection {
+    padding-top: 30px;
+    .heroTextWrap {
+      .title {
+        justify-content: flex-start;
+        width: 310px;
+        @include item-type-setting(27, 33, 0);
+      }
+    }
+
+    .secondSubTxt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        width: 460px;
+        span {
+          font-family: "Inter";
+          font-weight: 700;
+        }
       }
     }
   }

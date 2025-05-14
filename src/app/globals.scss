@@ -10,13 +10,20 @@
 // Mobile
 // ==========================================================================
 // Body Rests
+
+html,
 body {
-  // font-family: $baseFontFamily;
-  // color: $baseFontColor;
-  // font-weight: $baseFontWeight;
-  background: #fff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw; // Critical
+  overflow-x: hidden; // Critical
   position: relative;
-  overflow-x: hidden;
+}
+
+#__next {
+  width: 100%;
+  overflow: hidden;
 }
 
 h1,
@@ -28,63 +35,12 @@ h6 {
   // font-family: $interReg;
 }
 
-// @include links();
-
-// @include noScroll();
-
-#__next {
-  overflow: hidden;
-}
-
-// ==========================================================================
-// Sliders
-// ==========================================================================
-
-.noUi-horizontal {
-  height: 1px;
-  .noUi-handle {
-    background: #fff;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    border: none;
-    right: -4px;
-    top: -4px;
-    box-shadow: none;
-    &:before,
-    &:after {
-      display: none;
-    }
-  }
-}
-
-.noUi-target {
-  border: none;
-  background: #fff;
-}
-
-.noUi-connect {
-  background: #fff;
-}
-
-.used {
-  .noUi-horizontal {
-    .noUi-handle {
-      background: #000;
-    }
-  }
-  .noUi-target {
-    background: #fff;
-  }
-  .noUi-connect {
-    background: #000;
-  }
-}
-
 // ==========================================================================
 // Mobile
 // ==========================================================================
 @media (min-width: $breakMobile) {
+  body {
+  }
   // @include global-type-setting(
   //   $baseFontSize,
   //   // 11
@@ -93,11 +49,11 @@ h6 {
   //   $baseLetterSpacingSize
   // );
 
-  main {
-    min-height: calc(100vh - 560px);
-    padding-top: 100px;
-    // background-attachment: fixed !important;
-  }
+  // main {
+  //   min-height: calc(100vh - 560px);
+  //   padding-top: 100px;
+  //   // background-attachment: fixed !important;
+  // }
 }
 
 // ==========================================================================
@@ -112,11 +68,11 @@ h6 {
   //   $baseLetterSpacingSize
   // );
 
-  main {
-    min-height: calc(100vh - 662px);
-    padding-top: 100px;
-    // // padding-bottom: 300px;
-  }
+  // main {
+  //   min-height: calc(100vh - 662px);
+  //   padding-top: 100px;
+  //   // // padding-bottom: 300px;
+  // }
 }
 
 // ==========================================================================
@@ -131,11 +87,11 @@ h6 {
   //   $baseLetterSpacingSize
   // );
 
-  main {
-    min-height: calc(100vh - 372px);
-    padding-top: 105px;
-    // padding-bottom: 275px;
-  }
+  // main {
+  //   min-height: calc(100vh - 372px);
+  //   padding-top: 105px;
+  //   // padding-bottom: 275px;
+  // }
 }
 
 // ==========================================================================
@@ -150,11 +106,11 @@ h6 {
   //   $baseLetterSpacingSize
   // );
 
-  main {
-    min-height: calc(100vh - 445px);
-    padding-top: 180px;
-    // padding-bottom: 600px;
-  }
+  // main {
+  //   min-height: calc(100vh - 445px);
+  //   padding-top: 180px;
+  //   // padding-bottom: 600px;
+  // }
 }
 
 // ==========================================================================
@@ -169,9 +125,9 @@ h6 {
   //   $baseLetterSpacingSize
   // );
 
-  main {
-    min-height: calc(100vh - 512px);
-    padding-top: 200px;
-    // padding-bottom: 9505px;
-  }
+  // main {
+  //   min-height: calc(100vh - 512px);
+  //   padding-top: 200px;
+  //   // padding-bottom: 9505px;
+  // }
 }
