@@ -6,35 +6,14 @@
 
 .home {
   padding: 0;
+  @include layout.containerResponsiveNew($containerFull: false);
   .container {
-    .thinkingMan {
-      position: relative; // Required for Next.js fill prop
-      // padding-bottom: 100%; // Creates a square (1:1) aspect ratio
-      // display: none; // Default hidden on mobile
-
-      .thinkingMan {
-        // position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-    .svgWrap {
-      position: relative;
-      .cross,
-      .square,
-      .triangle,
-      .squiggle {
-        position: absolute;
-        width: 40px;
-        height: 70px;
-      }
-
-      .squiggle {
-        position: absolute;
-        width: 100px;
-        height: 70px;
-      }
+    position: relative;
+    .heroImageContainer {
+      // display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -88,11 +67,17 @@
       }
     }
     .secondSubTxt {
+      position: relative;
+      .arrowSquiggle {
+        // display: none;
+        position: absolute;
+      }
       p {
         font-family: "Inter";
         font-weight: 300;
         color: $navBlue;
       }
+
       .btnWrap {
         display: flex;
         justify-content: center;
@@ -108,302 +93,262 @@
       }
     }
   }
-}
 
-// ==========================================================================
-// Default
-// // ==========================================================================
+  // ==========================================================================
+  // Default
+  // // ==========================================================================
 
-@media (min-width: var.$breakMobile) {
-  .container {
-    .svgWrap {
-      .cross,
-      .square,
-      .triangle {
-        width: 40px;
-        height: 70px;
-      }
-
-      .cross {
-        top: -240px;
-        right: 20px;
-      }
-
-      .square {
-        top: -225px;
-        left: 20px;
-      }
-
-      .triangle {
-        bottom: -75px;
-        left: 20px;
-      }
-
-      .squiggle {
-        bottom: -45px;
-        right: 20px;
-        width: 100px;
-        height: 70px;
-      }
-
-      // .thinkingMan {
-      //   display: none;
-      // }
-    }
-  }
-
-  .videoSection {
-    padding-top: 70px;
-    padding-bottom: 30px;
-    .title {
-      white-space: nowrap; // Prevent line breaks
-      display: flex;
-      flex-wrap: wrap; // Allow wrapping if needed
-      align-items: baseline; // Align text baselines
-
-      .inlineBlock {
-        display: inline-block;
-        white-space: normal; // Allow text wrapping inside these spans
-        .underlinedWord {
-          position: relative;
-          display: inline-block;
-
-          .underlineSvg {
-            position: absolute;
-            bottom: -4px; // Adjust underline position
-            left: 0;
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-
-      .underlineContainer {
-        display: inline-flex;
-        gap: 0.25em; // Small gap between words
-
-        .underlinedWord {
-          position: relative;
-          display: inline-block;
-
-          .underlineSvg {
-            position: absolute;
-            bottom: -4px; // Adjust underline position
-            left: 0;
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-    }
-
-    .svgWrap {
-      padding-top: 55px;
+  @media (min-width: var.$breakMobile) {
+    .videoSection {
+      padding-top: 70px;
       padding-bottom: 30px;
-      .arrowDown {
-        width: 40px;
-        height: 70px;
-      }
-    }
-
-    .secondSubTxt {
-      p {
-        @include item-type-setting(14, 20, 0);
-        margin-bottom: 25px;
-      }
-    }
-  }
-
-  .graphImages {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; // Space between images
-    width: 100%;
-
-    .test {
-      position: relative; // Required for Next.js Image fill
-      width: 100%; // Take full available width
-      height: 0; // Let padding control height
-      padding-bottom: 30%; // Aspect ratio (adjust as needed)
-
-      // For graphImage2 (taller aspect ratio)
-      &:nth-child(2) {
-        padding-bottom: 60%; // Different aspect ratio
-      }
-    }
-
-    .graphImage1,
-    .graphImage2 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain; // Maintain aspect ratio
-    }
-  }
-}
-
-// ==========================================================================
-// Mobile Large
-// ==========================================================================
-
-@media (min-width: var.$breakLargeMobile) {
-  .container {
-    .svgWrap {
-      .cross,
-      .square,
-      .triangle {
-        width: 65px;
-        height: 70px;
-      }
-
-      .cross {
-        top: -220px;
-        right: 60px;
-      }
-
-      .square {
-        top: -250px;
-      }
-
-      .triangle {
-        bottom: -115px;
-        width: 50px;
-        height: 70px;
-      }
-
-      .squiggle {
-        bottom: -60px;
-        right: 20px;
-        width: 150px;
-        height: 90px;
-      }
-    }
-  }
-
-  .videoSection {
-    padding-top: 100px;
-    .heroTextWrap {
       .title {
-        justify-content: center;
+        white-space: nowrap; // Prevent line breaks
+        display: flex;
+        flex-wrap: wrap; // Allow wrapping if needed
+        align-items: baseline; // Align text baselines
+
+        .inlineBlock {
+          display: inline-block;
+          white-space: normal; // Allow text wrapping inside these spans
+          .underlinedWord {
+            position: relative;
+            display: inline-block;
+
+            .underlineSvg {
+              position: absolute;
+              bottom: -4px; // Adjust underline position
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .underlineContainer {
+          display: inline-flex;
+          gap: 0.25em; // Small gap between words
+
+          .underlinedWord {
+            position: relative;
+            display: inline-block;
+
+            .underlineSvg {
+              position: absolute;
+              bottom: -4px; // Adjust underline position
+              left: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .svgWrap {
+        padding-top: 55px;
+        padding-bottom: 30px;
+        .arrowDown {
+          width: 40px;
+          height: 70px;
+        }
+      }
+
+      .secondSubTxt {
+        .arrowSquiggle {
+          display: none;
+        }
+        p {
+          @include item-type-setting(14, 20, 0);
+          margin-bottom: 25px;
+        }
       }
     }
 
-    .secondSubTxt {
-      p {
-        text-align: center;
-      }
-    }
-
-    .arrowDown {
-      width: 45px;
-      height: 85px;
-    }
-  }
-
-  .graphImages {
-    div {
-      .graphImage1 {
-        width: 480px;
-        height: 120px;
-      }
-      .graphImage2 {
-        width: 486px;
-        height: 308px;
-      }
-    }
-  }
-}
-
-// ==========================================================================
-// Tablet
-// ==========================================================================
-
-@media (min-width: var.$breakTablet) {
-  .container {
-    height: 500px;
-    .svgWrap {
-      .triangle {
-        bottom: 550px !important;
-        left: 415px !important;
-        width: 60px !important;
-      }
-      .cross {
-        top: -615px;
-        width: 55px !important;
-      }
-
-      .square {
-        left: 315px !important;
-        width: 60px !important;
-      }
-
-      .squiggle {
-        bottom: 165px !important;
-        width: 125px !important;
-      }
-    }
-    .thinkingMan {
-      display: block;
-      position: absolute;
-      top: -230px;
-      left: 385px;
-      width: 350px;
-      height: 350px;
-      padding-bottom: 0;
-    }
-  }
-
-  .videoSection {
-    padding-top: 30px;
-    .heroTextWrap {
-      .title {
-        justify-content: flex-start;
-        width: 310px;
-        @include item-type-setting(27, 33, 0);
-      }
-    }
-
-    .secondSubTxt {
+    .graphImages {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      p {
-        width: 460px;
-        span {
-          font-family: "Inter";
-          font-weight: 700;
+      gap: 2rem; // Space between images
+      width: 100%;
+
+      .test {
+        position: relative; // Required for Next.js Image fill
+        width: 100%; // Take full available width
+        height: 0; // Let padding control height
+        padding-bottom: 30%; // Aspect ratio (adjust as needed)
+
+        // For graphImage2 (taller aspect ratio)
+        &:nth-child(2) {
+          padding-bottom: 60%; // Different aspect ratio
+        }
+      }
+
+      .graphImage1,
+      .graphImage2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; // Maintain aspect ratio
+      }
+    }
+
+    .footerImage {
+      display: none;
+    }
+  }
+
+  // ==========================================================================
+  // Mobile Large
+  // ==========================================================================
+
+  @media (min-width: var.$breakLargeMobile) {
+    .videoSection {
+      padding-top: 100px;
+      .heroTextWrap {
+        .title {
+          justify-content: center;
+        }
+      }
+
+      .secondSubTxt {
+        p {
+          text-align: center;
+        }
+      }
+
+      .arrowDown {
+        width: 45px;
+        height: 85px;
+      }
+    }
+
+    .graphImages {
+      div {
+        .graphImage1 {
+          width: 480px;
+          height: 120px;
+        }
+        .graphImage2 {
+          width: 486px;
+          height: 308px;
         }
       }
     }
   }
-}
 
-// ==========================================================================
-// Desktop
-// ==========================================================================
-@media (min-width: var.$breakDesktop) {
-  .container {
-    .svgWrap {
-      .cross,
-      .square,
-      .triangle {
-        width: 112px;
-        height: 100px;
+  // ==========================================================================
+  // Tablet
+  // ==========================================================================
+
+  @media (min-width: var.$breakTablet) {
+    .container {
+      height: 500px;
+      .heroImageContainer {
+        display: block;
+      }
+    }
+
+    .videoSection {
+      padding-top: unset;
+      .heroTextWrap {
+        .title {
+          justify-content: flex-start;
+          width: 310px;
+          @include item-type-setting(27, 33, 0);
+        }
       }
 
-      .squiggle {
-        width: 190px;
-        height: 100px;
+      .secondSubTxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .arrowSquiggle {
+          display: block;
+          width: 125px;
+          height: 70px;
+          right: 0;
+          top: 0;
+        }
+        p {
+          width: 460px;
+          span {
+            font-family: "Inter";
+            font-weight: 700;
+          }
+        }
       }
     }
   }
-}
 
-// ==========================================================================
-// HD
-// ==========================================================================
-@media (min-width: var.$breakHd) {
-  .container {
+  // ==========================================================================
+  // Desktop
+  // ==========================================================================
+  @media (min-width: var.$breakDesktop) {
+    .videoSection {
+      padding-top: 40px;
+      padding-bottom: 60px;
+      .heroTextWrap {
+        .title {
+          width: 350px;
+          @include item-type-setting(34, 42, 0);
+        }
+      }
+
+      .arrowDown {
+        width: 60px;
+        height: 85px;
+      }
+
+      .secondSubTxt {
+        .arrowSquiggle {
+          display: block;
+          width: 140px;
+          height: 90px;
+          right: 100px;
+          top: 0;
+        }
+        p {
+          width: 500px;
+          @include item-type-setting(18, 20, 0);
+        }
+      }
+    }
+
+    .graphImages {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 60px;
+      .test {
+        width: 50% !important;
+        height: 350px;
+        padding: 0 !important;
+        .graphImage1 {
+          height: 300px !important;
+        }
+        .graphImage2 {
+          height: 300px !important;
+        }
+      }
+    }
+
+    .footerImage {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .imageWrap {
+        width: 250px;
+        height: 250px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  // ==========================================================================
+  // HD
+  // ==========================================================================
+  @media (min-width: var.$breakHd) {
+    .videoSection {
+      padding-top: 90px;
+    }
   }
 }

@@ -59,12 +59,12 @@ const SiteHeader = (): JSX.Element => {
         </li>
         <li className={styles.navItem} role="none">
           <Link
-            href="/about-us"
+            href="/about"
             className={`${styles.navLink} ${
-              pathname === "/about-us" ? styles.active : ""
+              pathname === "/about" ? styles.active : ""
             }`}
             role="menuitem"
-            aria-current={pathname === "/about-us" ? "page" : undefined}
+            aria-current={pathname === "/about" ? "page" : undefined}
           >
             ABOUT US
           </Link>

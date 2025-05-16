@@ -9,7 +9,7 @@
 
 .quoteContainer {
   width: 100%;
-  max-width: 800px;
+  // max-width: 800px;
   margin: 2rem auto;
 }
 
@@ -74,6 +74,14 @@
 
 // Tablet
 @media (min-width: var.$breakTablet) {
+  .quoteContainer {
+    display: flex;
+    justify-content: center;
+
+    .quoteWrapper {
+      width: 635px;
+    }
+  }
   .quoteMarkLeft,
   .quoteMarkRight {
     width: 24px;
@@ -82,11 +90,18 @@
 
   .quoteContent {
     font-size: 16px;
+    p {
+    }
   }
 }
 
 // Desktop
 @media (min-width: var.$breakDesktop) {
+  .quoteContainer {
+    .quoteWrapper {
+      width: 450px;
+    }
+  }
   .quoteMarkLeft,
   .quoteMarkRight {
     width: 28px;

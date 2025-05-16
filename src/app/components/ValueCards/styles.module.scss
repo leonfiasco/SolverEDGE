@@ -1,0 +1,104 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/mixins/typography" as type;
+
+.card {
+  border-radius: 5px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
+  text-align: center; /* Ensures text alignment */
+  min-height: 150px; /* Gives consistent height */
+}
+
+.svgWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem; /* Space between icon and title */
+  order: 1; /* Makes SVG appear first */
+}
+
+.title {
+  margin: 0.5rem 0;
+  color: white;
+  order: 2; /* Title appears after SVG */
+}
+
+.text {
+  font-weight: 300;
+  color: white;
+  order: 3; /* Text appears last */
+  display: none; /* Hidden by default */
+}
+
+// ==========================================================================
+// Small Mobile
+// ==========================================================================
+@media (min-width: $breakMobile) {
+  .card {
+    width: 50px;
+    min-height: 50px;
+    padding: 0.5rem;
+
+    .svgWrap {
+      height: 35px;
+      width: 35px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-size: 10px;
+      margin: 0.25rem 0;
+    }
+  }
+}
+
+// ==========================================================================
+// Large Mobile
+// ==========================================================================
+@media (min-width: $breakLargeMobile) {
+  .card {
+    width: 120px;
+    min-height: 120px;
+
+    .text {
+      @include type.item-type-setting(12, 18, 0);
+    }
+  }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+@media (min-width: $breakTablet) {
+  .card {
+    width: 150px;
+    min-height: 150px;
+
+    .text {
+      @include type.item-type-setting(14, 22, 0);
+    }
+  }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: $breakDesktop) {
+  .card {
+    width: 200px;
+    min-height: 200px;
+    padding: 1.5rem;
+
+    .text {
+      @include type.item-type-setting(16, 24, 0);
+    }
+  }
+}

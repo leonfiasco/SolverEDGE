@@ -5,6 +5,9 @@ import HeroText from "./HeroText";
 import SecondHeroText from "./SecondHeroText";
 import YoutubeVideo from "./YoutubeVideo";
 import Quote from "./Quote";
+import HeroImage from "./HeroImage";
+import SectionHeading from "./SectionHeading";
+import ValueCards from "./ValueCards";
 
 // SVGs
 import Cross from "./svgs/Cross";
@@ -16,6 +19,13 @@ import Underline from "./svgs/Underline";
 import ArrowDown from "./svgs/ArrowDown";
 import QuoteLeft from "./svgs/QuoteLeft";
 import QuoteRight from "./svgs/QuoteRight";
+import ArrowSquiggle from "./svgs/ArrowSquiggle";
+import Star from "./svgs/Star";
+import Scribble from "./svgs/Scribble";
+import Diamond from "./svgs/Diamond";
+import Arch from "./svgs/Arch";
+import Stairs from "./svgs/Stairs";
+import Spike from "./svgs/Spike";
 
 export {
   SiteHeader,
@@ -25,6 +35,9 @@ export {
   SecondHeroText,
   YoutubeVideo,
   Quote,
+  HeroImage,
+  ValueCards,
+  SectionHeading,
   // SVGs
   Cross,
   Triangle,
@@ -35,4 +48,11 @@ export {
   ArrowDown,
   QuoteRight,
   QuoteLeft,
+  ArrowSquiggle,
+  Spike,
+  Stairs,
+  Arch,
+  Diamond,
+  Scribble,
+  Star,
 };

@@ -1,0 +1,204 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+
+.heroImage {
+  position: relative;
+
+  .imageContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svgWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Base SVG styles
+    .cross,
+    .square,
+    .triangle,
+    .squiggle {
+      position: absolute;
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (min-width: $breakMobile) {
+  .heroImage {
+    width: 100vw;
+
+    .imageContainer {
+      display: none;
+    }
+    .svgWrap {
+      .cross,
+      .square,
+      .triangle {
+        width: 50px;
+        height: 100px;
+      }
+      .cross {
+        top: 0px;
+        right: 0px;
+      }
+      .square {
+        top: 0px;
+        left: 50px;
+      }
+      .triangle {
+        bottom: -325px;
+        left: 45px;
+      }
+      .squiggle {
+        bottom: -290px;
+        right: 0px;
+        width: 135px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakLargeMobile) {
+  .heroImage {
+    .svgWrap {
+      .cross {
+        top: 0px;
+        right: 50px;
+        width: 65px;
+        height: 100px;
+      }
+      .square {
+        top: -15px;
+        left: 25px;
+        width: 50px;
+        height: 100px;
+      }
+      .triangle {
+        bottom: -340px;
+        left: 45px;
+        width: 65px;
+        height: 100px;
+      }
+      .squiggle {
+        right: 65px;
+        width: 145px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakTablet) {
+  // Adjust percentages as needed for larger screens
+
+  .heroImage {
+    .imageContainer {
+      display: block;
+      position: absolute;
+      right: -20px;
+      top: 15px;
+      width: 390px;
+      height: 430px;
+    }
+
+    .svgWrap {
+      .square {
+        width: 65px;
+        height: 100px;
+        top: 5px;
+        left: 400px;
+      }
+      .cross {
+        top: 15px;
+        right: 10px;
+      }
+      .triangle {
+        bottom: -445px;
+        left: 345px;
+      }
+
+      .squiggle {
+        bottom: -495px;
+        right: 35px;
+        width: 172px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakDesktop) {
+  .heroImage {
+    width: 790px;
+
+    .imageContainer {
+      right: 60px;
+      width: 480px;
+      height: 480px;
+    }
+
+    .svgWrap {
+      .square {
+        top: 20px;
+        left: 230px;
+        width: 75px;
+      }
+
+      .triangle {
+        width: 85px;
+        left: 215px;
+      }
+
+      .cross {
+        width: 80px;
+      }
+
+      .squiggle {
+        bottom: -430px;
+        right: 35px;
+        width: 172px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakHd) {
+  .heroImage {
+    .imageContainer {
+      right: 170px;
+      width: 550px;
+      height: 600px;
+    }
+
+    .svgWrap {
+      .triangle {
+        bottom: -550px;
+        width: 100px;
+        left: 50px;
+      }
+
+      .cross {
+        top: 70px;
+        width: 111px;
+        height: 115px !important;
+        right: 85px;
+      }
+
+      .square {
+        top: 31px;
+        left: 50px;
+        width: 100px;
+      }
+
+      .squiggle {
+        bottom: -511px;
+        right: 35px;
+        width: 225px;
+      }
+    }
+  }
+}

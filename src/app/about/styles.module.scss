@@ -1,0 +1,66 @@
+@use "../styles/base/variables" as *;
+@use "../styles/mixins/layout" as layout;
+@use "../styles/mixins/typography" as *;
+
+.about {
+  @include layout.containerResponsiveNew($containerFull: false);
+  font-family: "Inter";
+  .heroContainer {
+    display: flex;
+
+    .heroImageContainer {
+      display: none;
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (min-width: $breakMobile) {
+  .heroContainer {
+    padding-bottom: 70px;
+  }
+
+  .chooseUs {
+    padding-bottom: 70px;
+    .textWrap {
+      p {
+        font-family: 300;
+        color: $navBlue;
+        @include item-type-setting(12, 20, 0);
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .values {
+    .valueCards {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .svgWrap {
+      padding-top: 55px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      .arrowDown {
+        width: 40px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakLargeMobile) {
+}
+
+@media (min-width: $breakTablet) {
+}
+
+@media (min-width: $breakDesktop) {
+}
+
+@media (min-width: $breakHd) {
+}

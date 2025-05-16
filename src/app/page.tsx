@@ -1,17 +1,19 @@
 import {
   ArrowDown,
   Button,
-  Cross,
   HeroText,
-  Square,
-  Squiggle,
-  ThinkingMan,
-  Triangle,
   Underline,
   YoutubeVideo,
   Quote,
+  ArrowSquiggle,
+  HeroImage,
 } from "./components";
-import { GRAPH_IMAGE1, GRAPH_IMAGE2, HERO_IMAGE } from "@/utils/images";
+import {
+  GRAPH_IMAGE1,
+  GRAPH_IMAGE2,
+  HERO_IMAGE,
+  HIGH_FIVE,
+} from "@/utils/images";
 import Image from "next/image";
 
 import styles from "./page.module.scss";
@@ -30,20 +32,12 @@ export default function Home() {
           isBtn
           btnText={"get started"}
         />
-        <div className={styles.thinkingMan}>
-          <Image
-            src={HERO_IMAGE}
-            alt="Thinking-Man"
-            fill
-            className={styles.thinkingManImage}
-            style={{ objectFit: "contain" }}
+        <div className={styles.heroImageContainer}>
+          <HeroImage
+            image={HERO_IMAGE}
+            imgDescription="Thinking man image"
+            withSvg
           />
-        </div>
-        <div className={styles.svgWrap}>
-          <Cross className={styles.cross} />
-          <Square className={styles.square} />
-          <Squiggle className={styles.squiggle} />
-          <Triangle className={styles.triangle} />
         </div>
       </section>
       <section className={styles.videoSection}>
@@ -66,6 +60,7 @@ export default function Home() {
           </h1>
         </div>
         <div className={styles.secondSubTxt}>
+          <ArrowSquiggle className={styles.arrowSquiggle} />
           <p>
             <span>SolverEDGE</span> is an AI-powered learning platform that
             enhances problem-solving skills for students and adults. Developed
@@ -104,6 +99,17 @@ export default function Home() {
             fill // Makes image fill the parent
             className={styles.graphImage2}
             style={{ objectFit: "contain" }} // Preserve aspect ratio
+          />
+        </div>
+      </section>
+      <section className={styles.footerImage}>
+        <div className={styles.imageWrap}>
+          <Image
+            src={HIGH_FIVE}
+            alt="High-five"
+            fill
+            className={styles.highFive}
+            style={{ objectFit: "contain" }}
           />
         </div>
       </section>

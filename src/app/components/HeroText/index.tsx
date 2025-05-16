@@ -3,7 +3,7 @@ import { Button, Underline } from "../index";
 import styles from "./styles.module.scss";
 
 type props = {
-  firstText: string;
+  firstText?: string;
   secondText?: string;
   firstUnderLine?: string;
   secondUnderLine?: string;
