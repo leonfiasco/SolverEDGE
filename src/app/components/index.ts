@@ -1,4 +1,5 @@
 import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
 import NavDraw from "./navs/NavDraw";
 import Button from "./Button";
 import HeroText from "./HeroText";
@@ -8,6 +9,7 @@ import Quote from "./Quote";
 import HeroImage from "./HeroImage";
 import SectionHeading from "./SectionHeading";
 import ValueCards from "./ValueCards";
+import Partners from "./Partners";
 
 // SVGs
 import Cross from "./svgs/Cross";
@@ -28,6 +30,7 @@ import Stairs from "./svgs/Stairs";
 import Spike from "./svgs/Spike";
 
 export {
+  SiteFooter,
   SiteHeader,
   NavDraw,
   Button,
@@ -38,6 +41,7 @@ export {
   HeroImage,
   ValueCards,
   SectionHeading,
+  Partners,
   // SVGs
   Cross,
   Triangle,

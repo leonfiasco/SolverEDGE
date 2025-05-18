@@ -5,6 +5,7 @@ import {
   ArrowDown,
   HeroImage,
   HeroText,
+  Partners,
   SectionHeading,
   Spike,
   Stairs,
@@ -89,6 +90,7 @@ export default function About() {
       </section>
       <section className={styles.partners}>
         <SectionHeading title={"Our Partners"} />
+        <Partners />
       </section>
     </main>
   );

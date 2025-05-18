@@ -5,65 +5,23 @@
 // ==========================================================================
 // Default
 // ==========================================================================
-.sectionHeading {
-  text-align: center;
 
-  .titleWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .title {
-    margin: 0;
-    font-family: "Inter";
-    font-weight: 700;
-    color: $navBlue;
-  }
-
-  .star {
-    width: 24px;
-    height: 24px;
-
-    &Left {
-      transform: rotate(-15deg);
-    }
-
-    &Right {
-      transform: rotate(15deg);
-    }
-  }
-
-  .diamond {
-    width: 24px;
-    height: 24px;
-
-    &Left {
-      transform: rotate(-15deg);
-    }
-
-    &Right {
-      transform: rotate(15deg);
-    }
-  }
-
-  .underline {
-    width: 120px;
-    height: auto;
-    margin: 0 auto 0;
-    display: block;
+.footer {
+  background-color: $navBlue;
+  color: white;
+  font-family: "Inter";
+  font-weight: 300;
+  p {
+    margin-bottom: 0;
   }
 }
 // ==========================================================================
 // Default
 // ==========================================================================
 @media (min-width: $breakMobile) {
-  .sectionHeading {
-    padding-bottom: 30px;
-
+  .footer {
     p {
-      @include item-type-setting(14, 20, 0);
+      @include item-type-setting(8, 20, 0);
     }
   }
 }
@@ -79,43 +37,12 @@
 // ==========================================================================
 
 @media (min-width: $breakTablet) {
-  .sectionHeading {
-    .titleWrapper {
-      gap: 1.5rem;
-    }
-
-    .star,
-    .diamond {
-      width: 28px;
-      height: 28px;
-    }
-
-    .underline {
-      width: 140px;
-    }
-  }
 }
 
 // ==========================================================================
 // Desktop
 // ==========================================================================
 @media (min-width: $breakDesktop) {
-  .sectionHeading {
-    .titleWrapper {
-      gap: 2rem;
-    }
-
-    .star,
-    .diamond {
-      width: 32px;
-      height: 32px;
-    }
-
-    .underline {
-      width: 160px;
-      margin-top: 1rem;
-    }
-  }
 }
 
 // ==========================================================================

@@ -7,26 +7,19 @@
   font-family: "Inter";
   .heroContainer {
     display: flex;
-
+    position: relative;
     .heroImageContainer {
       display: none;
+      position: absolute;
     }
-  }
-}
-
-// Responsive Adjustments
-@media (min-width: $breakMobile) {
-  .heroContainer {
-    padding-bottom: 70px;
   }
 
   .chooseUs {
-    padding-bottom: 70px;
     .textWrap {
       p {
+        margin: 0;
         font-family: 300;
         color: $navBlue;
-        @include item-type-setting(12, 20, 0);
         span {
           font-weight: 700;
         }
@@ -35,32 +28,127 @@
   }
 
   .values {
-    .valueCards {
-      display: flex;
-      justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    .heroContainer {
+      padding-bottom: 70px;
     }
 
-    .svgWrap {
-      padding-top: 55px;
-      padding-bottom: 30px;
-      display: flex;
-      justify-content: center;
-      .arrowDown {
-        width: 40px;
-        height: 70px;
+    .chooseUs {
+      padding-bottom: 70px;
+      .textWrap {
+        p {
+          @include item-type-setting(12, 20, 0);
+        }
+      }
+    }
+
+    .values {
+      .valueCards {
+        display: flex;
+        justify-content: space-evenly;
+        width: 250px;
+      }
+
+      .svgWrap {
+        padding-top: 55px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        .arrowDown {
+          width: 40px;
+          height: 70px;
+        }
+      }
+    }
+
+    .partners {
+      padding-bottom: 70px;
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+    .chooseUs {
+      .textWrap {
+        text-align: center;
+        p {
+          @include item-type-setting(14, 20, 0);
+        }
+      }
+    }
+
+    .values {
+      .valueCards {
+        display: flex;
+        justify-content: space-evenly;
+        width: 475px;
       }
     }
   }
-}
 
-@media (min-width: $breakLargeMobile) {
-}
+  @media (min-width: $breakTablet) {
+    .heroContainer {
+      display: flex;
+      justify-content: start;
 
-@media (min-width: $breakTablet) {
-}
+      .heroImageContainer {
+        display: block;
+        right: 0;
+      }
+    }
+    .chooseUs {
+      .textWrap {
+        display: flex;
+        justify-content: center;
+        p {
+          text-align: center;
+          width: 820px;
+          @include item-type-setting(16, 20, 0);
+        }
+      }
+    }
 
-@media (min-width: $breakDesktop) {
-}
+    .values {
+      .valueCards {
+        width: 600px;
+      }
+    }
+  }
 
-@media (min-width: $breakHd) {
+  @media (min-width: $breakDesktop) {
+    .heroContainer {
+      display: flex;
+      justify-content: start;
+
+      .heroImageContainer {
+        display: block;
+        right: 0;
+      }
+    }
+
+    .chooseUs {
+      padding-top: 40px;
+      .textWrap {
+        p {
+          width: 820px;
+          // @include item-type-setting(16, 20, 0);
+        }
+      }
+    }
+
+    .values {
+      .valueCards {
+        width: 900px;
+      }
+    }
+  }
+
+  @media (min-width: $breakHd) {
+  }
 }

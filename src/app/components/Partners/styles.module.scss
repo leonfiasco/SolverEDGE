@@ -1,0 +1,60 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/mixins/typography" as type;
+
+// Base styles for marquee images
+.marquee {
+  img {
+    height: auto;
+    margin: 0 1rem;
+    object-fit: contain;
+  }
+}
+
+// ==========================================================================
+// Small Mobile
+// ==========================================================================
+@media (min-width: $breakMobile) {
+  .marquee {
+    img {
+      width: 100px; // Smaller size for small mobile
+      height: 55px;
+    }
+  }
+}
+
+// ==========================================================================
+// Large Mobile
+// ==========================================================================
+@media (min-width: $breakLargeMobile) {
+  .marquee {
+    img {
+      width: 125px; // Slightly larger for large mobile
+      height: 68px;
+    }
+  }
+}
+
+// ==========================================================================
+// Tablet
+// ==========================================================================
+@media (min-width: $breakTablet) {
+  .marquee {
+    img {
+      width: 145px; // Medium size for tablets
+      height: 79px;
+    }
+  }
+}
+
+// ==========================================================================
+// Desktop
+// ==========================================================================
+@media (min-width: $breakDesktop) {
+  .marquee {
+    img {
+      width: 172px; // Full size for desktop
+      height: 94px;
+    }
+  }
+}

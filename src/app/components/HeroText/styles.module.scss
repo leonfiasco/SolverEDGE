@@ -48,10 +48,11 @@
   .heroTextWrap {
     padding-top: 65px;
     .title {
-      @include item-type-setting(30, 20, 0);
+      @include item-type-setting(28, 20, 0);
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      width: 300px;
 
       .titleLine {
         display: block;
@@ -73,7 +74,7 @@
     }
 
     .underlineSvg {
-      bottom: -12px; // Adjust based on your SVG height
+      bottom: -10px; // Adjust based on your SVG height
       left: 0;
       width: 100%;
       height: 17px;
@@ -104,12 +105,15 @@
 
 @media (min-width: var.$breakTablet) {
   .heroTextWrap {
+    margin: 0;
     .title {
       @include item-type-setting(35, 32, 0);
+      width: unset;
     }
 
     .subText {
       @include item-type-setting(18, 20, 0);
+      width: 440px;
     }
   }
 }
@@ -119,12 +123,14 @@
 // ==========================================================================
 @media (min-width: var.$breakDesktop) {
   .heroTextWrap {
+    margin: 0;
     .title {
       @include item-type-setting(42, 40, 0);
     }
 
     .subText {
-      @include item-type-setting(22, 20, 0);
+      @include item-type-setting(22, 30, 0);
+      width: 600px;
     }
   }
 }
@@ -139,7 +145,8 @@
     }
 
     .subText {
-      @include item-type-setting(26, 20, 0);
+      @include item-type-setting(26, 30, 0);
+      width: 850px;
     }
   }
 }

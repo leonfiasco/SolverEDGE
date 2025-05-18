@@ -21,7 +21,7 @@ import styles from "./page.module.scss";
 export default function Home() {
   return (
     <main className={styles.home}>
-      <section className={styles.container}>
+      <section className={styles.heroSection}>
         <HeroText
           firstText={"Diagnose & Improve"}
           secondText={"Capabilities"}

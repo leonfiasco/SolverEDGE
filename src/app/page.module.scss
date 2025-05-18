@@ -7,7 +7,7 @@
 .home {
   padding: 0;
   @include layout.containerResponsiveNew($containerFull: false);
-  .container {
+  .heroSection {
     position: relative;
     .heroImageContainer {
       // display: none;
@@ -240,7 +240,7 @@
   // ==========================================================================
 
   @media (min-width: var.$breakTablet) {
-    .container {
+    .heroSection {
       height: 500px;
       .heroImageContainer {
         display: block;

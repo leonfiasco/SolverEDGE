@@ -31,7 +31,7 @@ const SiteHeader = (): JSX.Element => {
             aria-label="SolverEDGE Home"
           >
             <Image
-              src="/logo.webp"
+              src="/images/logo.webp"
               alt="SolverEDGE Logo"
               width={172} // Base width (for largest size)
               height={94} // Base height (for largest size)
