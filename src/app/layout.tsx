@@ -16,6 +16,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "SolverEDGE",
+  icons: {
+    icon: "/favicon.webp", // Uses WebP directly
+  },
   description:
     "North Shore Education Centre (Coaching College) is Australia's largest and leading tuition college. We prepare students for academic excellence and success.",
 };

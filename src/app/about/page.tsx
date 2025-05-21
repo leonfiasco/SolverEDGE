@@ -90,7 +90,7 @@ export default function About() {
         </div>
       </section>
       <section className={styles.partners}>
-        <SectionHeading title={"Our Partners"} />
+        <SectionHeading title={"Affiliate"} />
         <Partners />
       </section>
     </main>

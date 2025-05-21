@@ -102,7 +102,7 @@ const SiteHeader = (): JSX.Element => {
             </Link>
           </li>
           <li className={styles.navItem} role="none">
-            <Link href="/profile" className={styles.profileLink}>
+            <Link href="/login" className={styles.profileLink}>
               <FontAwesomeIcon
                 icon={faCircleUser}
                 size="lg"

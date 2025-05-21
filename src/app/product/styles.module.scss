@@ -4,8 +4,6 @@
 
 .product {
   @include layout.containerResponsiveNew($containerFull: false);
-  font-family: "Inter"; // Moved above nested rules to fix deprecation warning
-
   .heroSection {
     position: relative;
 
@@ -14,6 +12,10 @@
       top: 0;
       right: 0;
     }
+  }
+
+  & {
+    font-family: "Inter";
   }
 
   .ourProduct {

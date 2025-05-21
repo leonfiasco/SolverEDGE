@@ -1,0 +1,171 @@
+@use "../styles/base/variables" as *;
+@use "../styles/mixins/layout" as layout;
+@use "../styles/mixins/typography" as *;
+
+.login {
+  @include layout.containerResponsiveNew($containerFull: false);
+
+  & {
+    font-family: "Inter";
+  }
+
+  .heroSection {
+    position: relative;
+
+    .heroImageContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .loginFormSection {
+    padding: 40px 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .loginForm {
+      margin-top: 30px;
+
+      .formGroup {
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          color: $navBlue;
+          font-weight: 500;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid $shoreBlue;
+          border-radius: 8px;
+          font-family: "Inter";
+          box-sizing: border-box;
+
+          &::placeholder {
+            color: lighten($navBlue, 30%);
+          }
+        }
+      }
+
+      .formOptions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+
+        .rememberMe {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          input {
+            margin: 0;
+          }
+
+          label {
+            margin: 0;
+            color: $navBlue;
+            font-weight: 400;
+          }
+        }
+
+        .forgotPassword {
+          color: $navBlue;
+          text-decoration: none;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .submitButton {
+        width: 100%;
+        background-color: $navBlue;
+        color: white;
+        border: none;
+        padding: 14px;
+        border-radius: 8px;
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($navBlue, 10%);
+        }
+      }
+
+      .signupPrompt {
+        margin-top: 20px;
+        text-align: center;
+        color: $navBlue;
+
+        a {
+          color: $navBlue;
+          font-weight: 600;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footerImage {
+    display: none;
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    .loginFormSection {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+    .loginFormSection {
+      padding-top: 150px;
+    }
+  }
+
+  @media (min-width: $breakTablet) {
+    .loginFormSection {
+      padding-top: 180px;
+    }
+
+    .footerImage {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .mazeWrap {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  @media (min-width: $breakDesktop) {
+    .loginFormSection {
+      padding-top: 200px;
+    }
+
+    .footerImage {
+      .mazeWrap {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+}

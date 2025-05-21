@@ -7,3 +7,5 @@ export const BRAIN_IMAGE = "/images/brain-storm.svg";
 export const ROCKET = "/images/rocket.svg";
 export const BOOKS = "/images/books.svg";
 export const MAZE = "/images/maze.svg";
+export const CONTACT = "/images/contact.svg";
+export const LOGIN = "/images/login.svg";

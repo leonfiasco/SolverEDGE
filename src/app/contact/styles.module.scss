@@ -1,0 +1,146 @@
+@use "../styles/base/variables" as *;
+@use "../styles/mixins/layout" as layout;
+@use "../styles/mixins/typography" as *;
+
+.contact {
+  @include layout.containerResponsiveNew($containerFull: false);
+
+  .heroSection {
+    position: relative;
+
+    .heroImageContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  & {
+    font-family: "Inter";
+  }
+
+  .contactMethods {
+    padding: 40px 0;
+
+    .methodsGrid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); // 12-column grid
+      gap: 20px;
+      margin-top: 30px;
+
+      .methodCard {
+        grid-column: span 12; // Default: full width on mobile
+        border: 2px dotted $shoreBlue;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+
+        .icon {
+          font-size: 2rem;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          color: $navBlue;
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: $navBlue;
+          word-break: break-word;
+        }
+      }
+    }
+  }
+
+  .formSection {
+    width: 100%;
+    box-sizing: border-box;
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      .formGroup {
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid $shoreBlue;
+          border-radius: 8px;
+          font-family: "Inter";
+          box-sizing: border-box;
+        }
+      }
+
+      .submitButton {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    .contactMethods {
+      padding-top: 110px;
+
+      .methodsGrid {
+        .methodCard {
+          grid-column: span 12; // 2 columns on mobile (2x6=12)
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+    .contactMethods {
+      padding-top: 190px;
+    }
+  }
+
+  @media (min-width: $breakTablet) {
+    .contactMethods {
+      .methodsGrid {
+      }
+    }
+  }
+
+  @media (min-width: $breakDesktop) {
+    .contactMethods {
+      padding-top: 245px;
+      .methodsGrid {
+        .methodCard {
+          grid-column: span 3; // 4 columns on desktop (4x3=12)
+        }
+      }
+    }
+
+    .formSection {
+      padding: 80px 0;
+    }
+  }
+
+  @media (min-width: $breakHd) {
+    .contactMethods {
+      padding-top: 290px;
+      .methodsGrid {
+        .methodCard {
+          grid-column: span 3; // 4 columns on desktop (4x3=12)
+        }
+      }
+    }
+  }
+}

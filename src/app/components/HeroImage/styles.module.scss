@@ -206,6 +206,39 @@
       }
     }
 
+    &.contact {
+      .imageContainer {
+        display: block;
+        position: absolute;
+        right: -45px;
+        width: 315px;
+        height: 360px;
+      }
+      .svgWrap {
+        .square {
+          width: 65px;
+          height: 100px;
+          top: 5px;
+          left: 463px;
+        }
+        .cross {
+          top: -14px;
+          width: 50px;
+          right: 10px;
+        }
+        .triangle {
+          bottom: -320px;
+          left: unset;
+          right: 240px;
+        }
+
+        .squiggle {
+          bottom: -386px;
+          right: 0px;
+          width: 172px;
+        }
+      }
+    }
     .svgWrap {
       .square {
         width: 65px;
@@ -296,6 +329,38 @@
 
         .squiggle {
           bottom: -440px;
+          right: 15px;
+          width: 172px;
+        }
+      }
+    }
+
+    &.contact {
+      .imageContainer {
+        top: 70px;
+        width: 365px;
+        height: 360px;
+      }
+      .svgWrap {
+        .square {
+          width: 85px;
+          height: 100px;
+          top: 5px;
+          left: 430px;
+        }
+        .cross {
+          top: 5px;
+          right: 10px;
+          width: 70px;
+        }
+        .triangle {
+          bottom: -415px;
+          left: unset;
+          right: 300px;
+        }
+
+        .squiggle {
+          bottom: -475px;
           right: 15px;
           width: 172px;
         }
@@ -403,6 +468,35 @@
           bottom: -500px;
           right: 15px;
           width: 222px;
+        }
+      }
+    }
+
+    &.contact {
+      .imageContainer {
+        top: 60px;
+        width: 495px;
+        height: 460px;
+      }
+      .svgWrap {
+        .square {
+          top: 15px;
+          left: 350px;
+        }
+        .cross {
+          top: 5px;
+          width: 100px;
+          right: 10px;
+        }
+        .triangle {
+          left: unset;
+          right: 395px;
+        }
+
+        .squiggle {
+          bottom: -545px;
+          right: 76px;
+          width: 172px;
         }
       }
     }
