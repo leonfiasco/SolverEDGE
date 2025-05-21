@@ -25,7 +25,9 @@ const SectionHeading = ({ title, star, diamond }: props) => {
           <Diamond className={`${styles.diamond} ${styles.diamondRight}`} />
         ) : null}
       </div>
-      <Scribble className={styles.underline} />
+      <div className={styles.underlineContainer}>
+        <Scribble className={styles.underline} />
+      </div>
     </div>
   );
 };

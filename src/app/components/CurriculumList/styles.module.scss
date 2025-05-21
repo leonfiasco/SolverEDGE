@@ -1,0 +1,55 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/mixins/typography" as *;
+
+.listWrap {
+  border: 2px dotted $shoreBlue;
+  margin: 0;
+  padding: 10px;
+  border-radius: 15px;
+  .listItem {
+    border: 2px dotted $shoreBlue;
+    border-radius: 15px;
+    list-style: none;
+    color: $navBlue;
+  }
+}
+
+// Responsive Adjustments
+@media (min-width: $breakMobile) {
+  .listWrap {
+    .listItem {
+      text-align: center;
+    }
+
+    .listItem:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: $breakLargeMobile) {
+}
+
+@media (min-width: $breakTablet) {
+  .listWrap {
+    .listItem {
+      display: inline-block; // Makes border wrap content width
+      padding: 8px 12px; // Add padding for better visual appearance
+      margin: 5px; // Add some spacing between items
+      word-wrap: break-word; // Ensures long words will break
+      white-space: normal; // Allows text to wrap
+      width: auto; // Let content determine width
+      max-width: 100%; // Ensure it doesn't overflow container
+    }
+  }
+}
+
+@media (min-width: $breakDesktop) {
+  .listWrap {
+    width: 892px;
+  }
+}
+
+@media (min-width: $breakHd) {
+}

@@ -1,116 +1,116 @@
-@use "../../styles/base/variables" as *; // Global namespace
-@use "../../styles/mixins/layout" as layout; // Namespaced
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
 
-// ==========================================================================
-// Default
-// ==========================================================================
+.header {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  z-index: 1000;
+  overflow-x: hidden; // Prevents horizontal scrolling
+}
 
 .navbar {
   width: 100%;
-  max-width: 100vw;
-  position: relative;
+  height: 80px;
+  padding: 0 1rem;
   display: flex;
-  padding: 0;
-  .logo {
-    height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box; // Ensures padding is included in width
+
+  .logoContainer {
+    height: 100%;
     display: flex;
     align-items: center;
-    .logoContainer {
-      a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
+    flex-shrink: 0; // Prevents logo from shrinking
+
+    .logoLink {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    .logoImage {
+      height: 50px;
+      width: auto;
+      max-width: 100%; // Ensures image doesn't overflow
+      object-fit: contain;
+      transition: all 0.3s ease;
+
+      @media (min-width: $breakTablet) {
+        height: 60px;
       }
 
-      .logoLink {
-        text-decoration: none;
-        color: black;
-      }
-      &.active {
-        position: relative;
-        z-index: 1000;
-        .logoLink {
-          color: white;
-        }
-      }
-
-      .logoImage {
-        width: auto; // Allow CSS to control width
-        height: auto; // Allow CSS to control height
-        object-fit: contain; // Ensure proper scaling
+      @media (min-width: $breakDesktop) {
+        height: 70px;
       }
     }
   }
+
   .navMenu {
+    display: none;
     list-style: none;
     margin: 0;
     padding: 0;
-    // gap: 1.5rem;
-  }
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 1; // Allows menu to shrink if needed
 
-  .navItem {
-    position: relative;
-    color: $navBlue;
-    font-family: "Inter";
-    font-weight: 400;
-    // display: none;
-  }
-}
-
-// ==========================================================================
-// Default
-// ==========================================================================
-@media (min-width: $breakMobile) {
-  .navbar {
-    justify-content: space-between;
-    border: 2px solid blue;
-
-    .navMenu {
+    @media (min-width: $breakDesktop) {
       display: flex;
-      border: 2px solid red;
-      .navItem {
-        display: none;
-      }
     }
-  }
-}
-// ==========================================================================
-// Mobile Large
-// ==========================================================================
 
-@media (min-width: $breakLargeMobile) {
-}
+    .navItem {
+      position: relative;
+      white-space: nowrap; // Prevents text wrapping
 
-// ==========================================================================
-// Tablet
-// ==========================================================================
+      .navLink {
+        color: $navBlue;
+        font-family: "Inter";
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem); // Responsive font size
+        letter-spacing: 0.5px;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 0.3s ease;
 
-@media (min-width: $breakTablet) {
-  .navbar {
-  }
-}
+        &:hover {
+          color: darken($navBlue, 10%);
+        }
 
-// ==========================================================================
-// Desktop
-// ==========================================================================
-@media (min-width: $breakDesktop) {
-  .navbar {
-    width: 1000px;
-    .navMenu {
-      display: flex;
-      border: 2px solid red;
-      align-items: center;
-      .navItem {
+        &.active {
+          color: darken($navBlue, 20%);
+          font-weight: 500;
+        }
+      }
+
+      .profileLink {
         display: flex;
-        justify-content: space-between;
-        border: 2px solid green;
+        align-items: center;
+        color: $navBlue;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($navBlue, 10%);
+        }
+      }
+
+      .userIcon {
+        margin-left: 1rem;
       }
     }
   }
-}
 
-// ==========================================================================
-// HD
-// ==========================================================================
-@media (min-width: $breakHd) {
+  .burgerMenuContainer {
+    display: block;
+    flex-shrink: 0; // Prevents burger icon from shrinking
+
+    @media (min-width: $breakDesktop) {
+      display: none;
+    }
+  }
 }

@@ -1,0 +1,78 @@
+@use "../styles/base/variables" as *;
+@use "../styles/mixins/layout" as layout;
+@use "../styles/mixins/typography" as *;
+
+.curriculum {
+  @include layout.containerResponsiveNew($containerFull: false);
+  font-family: "Inter";
+  .heroSection {
+    position: relative;
+
+    .heroImageContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    .strategiesList {
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+    .thinkingList {
+      padding-bottom: 50px;
+    }
+
+    .footerImage {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+  }
+
+  @media (min-width: $breakTablet) {
+    .strategiesList,
+    .thinkingList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .strategiesList {
+      padding-top: 95px;
+    }
+
+    .thinkingList {
+      padding-bottom: 70px;
+    }
+
+    .footerImage {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .mazeWrap {
+        width: 250px;
+        height: 250px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $breakDesktop) {
+    .footerImage {
+      .mazeWrap {
+        width: 350px;
+        height: 350px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $breakHd) {
+    .strategiesList {
+      padding-top: 150px;
+    }
+  }
+}

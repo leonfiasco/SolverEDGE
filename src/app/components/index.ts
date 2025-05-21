@@ -10,6 +10,8 @@ import HeroImage from "./HeroImage";
 import SectionHeading from "./SectionHeading";
 import ValueCards from "./ValueCards";
 import Partners from "./Partners";
+import Publications from "./Publications";
+import CurriculumList from "./CurriculumList";
 
 // SVGs
 import Cross from "./svgs/Cross";
@@ -41,7 +43,9 @@ export {
   HeroImage,
   ValueCards,
   SectionHeading,
+  Publications,
   Partners,
+  CurriculumList,
   // SVGs
   Cross,
   Triangle,

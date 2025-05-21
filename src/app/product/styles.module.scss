@@ -1,0 +1,123 @@
+@use "../styles/base/variables" as *;
+@use "../styles/mixins/layout" as layout;
+@use "../styles/mixins/typography" as *;
+
+.product {
+  @include layout.containerResponsiveNew($containerFull: false);
+  font-family: "Inter"; // Moved above nested rules to fix deprecation warning
+
+  .heroSection {
+    position: relative;
+
+    .heroImageContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .ourProduct {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .graphWrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 172/94;
+      margin: 0 auto;
+
+      .graph {
+        object-fit: contain;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+
+    .imageWrap {
+      position: relative;
+
+      .highFive {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .theory {
+    position: relative;
+
+    .subTitle {
+      font-weight: 700;
+      color: $navBlue;
+    }
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    padding-bottom: 50px;
+
+    .ourProduct {
+      padding-top: 130px;
+
+      .imageWrap {
+        width: 150px;
+        height: 150px;
+        margin: 30px auto 0;
+      }
+    }
+
+    .theory {
+      padding-top: 30px;
+
+      .subTitle {
+        @include item-type-setting(14, 20, 0);
+      }
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+    .ourProduct {
+      padding-top: 215px;
+
+      .imageWrap {
+        width: 250px;
+        height: 250px;
+        margin: 30px auto 0;
+      }
+    }
+
+    .theory {
+      padding-top: 30px;
+
+      .subTitle {
+        @include item-type-setting(14, 20, 0);
+      }
+    }
+  }
+
+  @media (min-width: $breakTablet) {
+    .ourProduct {
+      .graphWrap {
+        width: 80%;
+        aspect-ratio: 225/94;
+      }
+    }
+  }
+
+  @media (min-width: $breakDesktop) {
+    .ourProduct {
+      padding-top: 295px;
+    }
+  }
+
+  @media (min-width: $breakHd) {
+    .ourProduct {
+      .graphWrap {
+        width: 65%;
+      }
+    }
+  }
+}

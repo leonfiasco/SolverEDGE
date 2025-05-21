@@ -3,3 +3,7 @@ export const GRAPH_IMAGE2 = "/images/graph2.svg";
 export const HERO_IMAGE = "/images/thinkingMan.svg";
 export const HIGH_FIVE = "/images/high-five.svg";
 export const KID_IMAGE = "/images/kid-img.svg";
+export const BRAIN_IMAGE = "/images/brain-storm.svg";
+export const ROCKET = "/images/rocket.svg";
+export const BOOKS = "/images/books.svg";
+export const MAZE = "/images/maze.svg";

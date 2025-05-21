@@ -1,0 +1,35 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/mixins/layout" as layout;
+@use "../../styles/mixins/typography" as *;
+
+.publications {
+  @include layout.containerResponsiveNew($containerFull: false);
+  font-family: "Inter";
+  color: $navBlue;
+  .year {
+    font-weight: 700;
+  }
+  .publicationItem {
+    font-weight: 300;
+  }
+
+  // Responsive Adjustments
+  @media (min-width: $breakMobile) {
+    .publicationItem,
+    .publicationParagraph {
+      @include item-type-setting(12, 20, 0);
+    }
+  }
+
+  @media (min-width: $breakLargeMobile) {
+  }
+
+  @media (min-width: $breakTablet) {
+  }
+
+  @media (min-width: $breakDesktop) {
+  }
+
+  @media (min-width: $breakHd) {
+  }
+}

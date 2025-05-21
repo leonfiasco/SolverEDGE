@@ -36,6 +36,7 @@ export default function About() {
           <HeroImage
             image={KID_IMAGE}
             imgDescription="Kid with his arms crossed"
+            variant="about"
           />
         </div>
       </section>

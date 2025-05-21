@@ -7,13 +7,20 @@ import Image from "next/image";
 type props = {
   image: string;
   imgDescription: string;
-  imgClassName?: string; // Made optional with ?
+  imgClassName?: string;
   withSvg?: boolean;
+  variant?: string;
 };
 
-const HeroImage = ({ image, imgDescription, imgClassName, withSvg }: props) => {
+const HeroImage = ({
+  image,
+  imgDescription,
+  imgClassName,
+  withSvg,
+  variant,
+}: props) => {
   return (
-    <div className={styles.heroImage}>
+    <div className={`${styles.heroImage} ${variant ? styles[variant] : null}`}>
       <div className={styles.imageContainer}>
         <Image
           src={image}
