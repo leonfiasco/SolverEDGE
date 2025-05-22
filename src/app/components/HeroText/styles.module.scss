@@ -37,6 +37,11 @@
 
   .underlineSvg {
     position: absolute;
+    bottom: -2px; // Closer to text
+    left: 0;
+    width: 100%; // Scale with parent width
+    height: auto; // Maintain aspect ratio
+    min-height: 8px; // Fallback minimum
   }
 }
 
@@ -74,10 +79,19 @@
     }
 
     .underlineSvg {
-      bottom: -10px; // Adjust based on your SVG height
+      bottom: -5px; // Adjust based on your SVG height
       left: 0;
       width: 100%;
-      height: 17px;
+      // height: 17px;
+    }
+
+    &.login {
+      .underlineSvg {
+        bottom: -15px; // Adjust based on your SVG height
+        left: 0;
+        width: 100%;
+        // height: 17px;
+      }
     }
   }
 }
@@ -131,6 +145,19 @@
     .subText {
       @include item-type-setting(22, 30, 0);
       width: 600px;
+    }
+
+    .underlineSvg {
+      bottom: -11px;
+    }
+
+    &.login {
+      .underlineSvg {
+        bottom: -24px; // Adjust based on your SVG height
+        left: 0;
+        width: 100%;
+        // height: 17px;
+      }
     }
   }
 }

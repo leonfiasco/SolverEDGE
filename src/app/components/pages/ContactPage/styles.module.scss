@@ -1,6 +1,6 @@
-@use "../styles/base/variables" as *;
-@use "../styles/mixins/layout" as layout;
-@use "../styles/mixins/typography" as *;
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/mixins/layout" as layout;
+@use "../../../styles/mixins/typography" as *;
 
 .contact {
   @include layout.containerResponsiveNew($containerFull: false);

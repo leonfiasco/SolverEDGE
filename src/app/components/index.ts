@@ -13,6 +13,15 @@ import Partners from "./Partners";
 import Publications from "./Publications";
 import CurriculumList from "./CurriculumList";
 
+// Pages
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProductPage from "./pages/ProductPage";
+import CurriculumPage from "./pages/CurriculumPage";
+import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+
 // SVGs
 import Cross from "./svgs/Cross";
 import Triangle from "./svgs/Triangle";
@@ -46,6 +55,15 @@ export {
   Publications,
   Partners,
   CurriculumList,
+  // Page
+  HomePage,
+  AboutPage,
+  ProductPage,
+  CurriculumPage,
+  ContactPage,
+  LoginPage,
+  SignupPage,
+
   // SVGs
   Cross,
   Triangle,

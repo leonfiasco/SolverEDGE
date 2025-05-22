@@ -1,6 +1,6 @@
-@use "../styles/base/variables" as *;
-@use "../styles/mixins/layout" as layout;
-@use "../styles/mixins/typography" as *;
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/mixins/layout" as layout;
+@use "../../../styles/mixins/typography" as *;
 
 .about {
   @include layout.containerResponsiveNew($containerFull: false);
@@ -103,6 +103,7 @@
       }
     }
     .chooseUs {
+      padding-top: 70px;
       .textWrap {
         display: flex;
         justify-content: center;
@@ -150,5 +151,8 @@
   }
 
   @media (min-width: $breakHd) {
+    .chooseUs {
+      padding-top: 85px;
+    }
   }
 }

@@ -6,43 +6,64 @@
 // Default
 // ==========================================================================
 
+// Footer styles
 .footer {
   background-color: $navBlue;
   color: white;
-  font-family: "Inter";
-  font-weight: 300;
-  p {
-    margin-bottom: 0;
-  }
-}
-// ==========================================================================
-// Default
-// ==========================================================================
-@media (min-width: $breakMobile) {
-  .footer {
-    p {
-      @include item-type-setting(8, 20, 0);
-    }
-  }
-}
-// ==========================================================================
-// Mobile Large
-// ==========================================================================
+  font-family: "Inter", sans-serif;
+  padding: 2rem 1rem;
+  text-align: center;
 
-@media (min-width: $breakLargeMobile) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  // First paragraph - copyright
+  p:first-child {
+    font-weight: 400;
+    @include item-type-setting(8, 20, 0);
+  }
+
+  // Second paragraph - credit
+  p:last-child {
+    font-weight: 300;
+    font-size: 0.875rem;
+    opacity: 0.8;
+  }
 }
 
 // ==========================================================================
 // Tablet
 // ==========================================================================
-
 @media (min-width: $breakTablet) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2.5rem;
+
+    p:first-child {
+      text-align: left;
+    }
+
+    p:last-child {
+      text-align: right;
+    }
+  }
 }
 
 // ==========================================================================
 // Desktop
 // ==========================================================================
 @media (min-width: $breakDesktop) {
+  .footer {
+    padding: 2rem 5rem;
+  }
 }
 
 // ==========================================================================

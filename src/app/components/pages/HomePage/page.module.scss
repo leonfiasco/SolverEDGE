@@ -1,8 +1,8 @@
 // @use "sass:map";
-@use "./styles/base/variables.scss" as *;
-@use "./styles/mixins/layout" as layout;
-@use "./styles/base/variables" as var;
-@use "./styles/mixins/typography" as *;
+@use "../../../styles/base/variables.scss" as *;
+@use "../../../styles/mixins/layout" as layout;
+@use "../../../styles/base/variables" as var;
+@use "../../../styles/mixins/typography" as *;
 
 .home {
   padding: 0;

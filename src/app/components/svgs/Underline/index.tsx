@@ -1,18 +1,24 @@
-import { JSX } from "react";
+"use client";
+import { motion } from "framer-motion";
 
-const Underline = (props: { className: string }): JSX.Element => {
+const Underline = (props: { className: string }) => {
   const { className } = props;
+
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       viewBox="0 0 249 21"
+      initial={{ clipPath: "inset(0% 100% 0% 0%)" }}
+      animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+      transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+      preserveAspectRatio="none"
     >
       <path
         fill="#37A0FE"
         d="M247.732 6.75c-14.169-.407-28.33-.923-42.499-1.186-8.665-.153-17.352-.017-26.032.168-7.978.169-15.961.41-23.953.892-12.961.786-25.934 1.463-38.882 2.756-34.677 3.445-69.337 7.191-104.006 10.793-2.514.265-5.184.961-7.484.303-1.724-.496-3.725-2.509-4.25-4.431-.814-2.993 1.25-4.382 3.82-4.586 14.62-1.196 29.247-2.478 43.875-3.65 27.278-2.197 54.552-4.49 81.831-6.433 12.06-.86 24.145-1.249 36.183-1.277 4.071-.003 8.139.017 12.222-.01 3.505-.02 7.03 1.47 10.436.855 5.077-.916 9.741 1.584 14.544.757 6.452-1.106 12.406.96 18.627 1.127 6.542.164 13.09.377 19.611.806 2.122.145 4.168 1.025 6.248 1.58l-.271 1.537z"
-      ></path>
-    </svg>
+      />
+    </motion.svg>
   );
 };
 

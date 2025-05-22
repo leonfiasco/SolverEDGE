@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Login | SolverEDGE",
+  title: "Sign-up | SolverEDGE",
   description: "Access your SolverEDGE account",
 };
 
-import { LoginPage } from "../components";
+import { SignupPage } from "../components";
 
 export default function Login() {
-  return <LoginPage />;
+  return <SignupPage />;
 }

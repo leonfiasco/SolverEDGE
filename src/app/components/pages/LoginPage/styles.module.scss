@@ -1,6 +1,6 @@
-@use "../styles/base/variables" as *;
-@use "../styles/mixins/layout" as layout;
-@use "../styles/mixins/typography" as *;
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/mixins/layout" as layout;
+@use "../../../styles/mixins/typography" as *;
 
 .login {
   @include layout.containerResponsiveNew($containerFull: false);
@@ -87,7 +87,7 @@
 
       .submitButton {
         width: 100%;
-        background-color: $navBlue;
+        background-color: $shoreBlue;
         color: white;
         border: none;
         padding: 14px;
@@ -100,16 +100,17 @@
 
         &:hover {
           background-color: darken($navBlue, 10%);
+          color: $shoreBlue;
         }
       }
 
       .signupPrompt {
         margin-top: 20px;
         text-align: center;
-        color: $navBlue;
+        color: $shoreBlue;
 
         a {
-          color: $navBlue;
+          color: $shoreBlue;
           font-weight: 600;
           text-decoration: none;
 
@@ -158,7 +159,20 @@
 
   @media (min-width: $breakDesktop) {
     .loginFormSection {
-      padding-top: 200px;
+      padding-top: 250px;
+    }
+
+    .footerImage {
+      .mazeWrap {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+
+  @media (min-width: $breakHd) {
+    .loginFormSection {
+      padding-top: 350px;
     }
 
     .footerImage {
