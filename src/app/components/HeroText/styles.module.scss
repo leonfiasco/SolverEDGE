@@ -1,7 +1,6 @@
 // @use "sass:map";
 @use "../../styles/base/variables" as *;
 @use "../../styles/mixins/layout" as layout;
-@use "../../styles/base/variables" as var;
 @use "../../styles/mixins/typography" as *;
 
 .heroTextWrap {
@@ -49,7 +48,7 @@
 // Default
 // // ==========================================================================
 
-@media (min-width: var.$breakMobile) {
+@media (min-width: $breakMobile) {
   .heroTextWrap {
     padding-top: 65px;
     .title {
@@ -100,7 +99,7 @@
 // Mobile Large
 // ==========================================================================
 
-@media (min-width: var.$breakLargeMobile) {
+@media (min-width: $breakLargeMobile) {
   .heroTextWrap {
     padding-top: 45px;
     .title {
@@ -117,7 +116,7 @@
 // Tablet
 // ==========================================================================
 
-@media (min-width: var.$breakTablet) {
+@media (min-width: $breakTablet) {
   .heroTextWrap {
     margin: 0;
     .title {
@@ -135,7 +134,7 @@
 // ==========================================================================
 // Desktop
 // ==========================================================================
-@media (min-width: var.$breakDesktop) {
+@media (min-width: $breakDesktop) {
   .heroTextWrap {
     margin: 0;
     .title {
@@ -165,7 +164,7 @@
 // ==========================================================================
 // HD
 // ==========================================================================
-@media (min-width: var.$breakHd) {
+@media (min-width: $breakHd) {
   .heroTextWrap {
     .title {
       @include item-type-setting(52, 50, 0);

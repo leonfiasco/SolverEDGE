@@ -1,3 +1,5 @@
+"use client";
+
 import { useThemeContext } from "@/app/store/ThemeContext";
 import styles from "./styles.module.scss";
 import Navigation from "../Navigation/Navigation";

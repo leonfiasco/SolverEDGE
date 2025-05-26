@@ -8,13 +8,15 @@
   // Hamburger icon
   .burgerContainer {
     display: flex;
-
+    .burgerContainer {
+      z-index: 1101; // Higher than nav drawer
+    }
     .hamburger {
       position: relative;
       display: block;
       float: right;
       cursor: pointer;
-      z-index: 3;
+      z-index: 1000;
       width: 24px;
       height: 18px;
       background: transparent;

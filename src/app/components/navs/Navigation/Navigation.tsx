@@ -5,16 +5,17 @@ import styles from "./styles.module.scss";
 
 type props = {
   isActive?: boolean;
-  theme?: string;
   navDrawOpen?: boolean;
 };
 
-const Navigation = ({ isActive, theme, navDrawOpen }: props) => {
+const Navigation = ({ isActive, navDrawOpen }: props) => {
   const { setNavDrawOpen } = useThemeContext();
 
   const navItems = [
-    { label: "About me", link: "/about" },
-    { label: "Projects", link: "/projects" },
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Product", link: "/product" },
+    { label: "Curriculum", link: "/curriculum" },
     { label: "Contact", link: "/contact" },
   ];
 
@@ -37,11 +38,7 @@ const Navigation = ({ isActive, theme, navDrawOpen }: props) => {
         navDrawOpen ? styles.open : null
       }`}
     >
-      <ul
-        className={`${styles.navList} ${theme === "dark" ? styles.dark : null}`}
-      >
-        {renderNavigation()}
-      </ul>
+      <ul className={styles.navList}>{renderNavigation()}</ul>
     </div>
   );
 };

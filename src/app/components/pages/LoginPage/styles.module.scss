@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../../styles/base/variables" as *;
 @use "../../../styles/mixins/layout" as layout;
 @use "../../../styles/mixins/typography" as *;
@@ -6,7 +7,7 @@
   @include layout.containerResponsiveNew($containerFull: false);
 
   & {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
   }
 
   .heroSection {
@@ -20,34 +21,41 @@
   }
 
   .loginFormSection {
-    padding: 40px 0;
+    padding: 2.5rem 0;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
 
     .loginForm {
-      margin-top: 30px;
+      margin-top: 1.875rem;
 
       .formGroup {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
 
         label {
           display: block;
-          margin-bottom: 8px;
+          margin-bottom: 0.5rem;
           color: $navBlue;
           font-weight: 500;
         }
 
         input {
           width: 100%;
-          padding: 12px;
+          padding: 0.75rem;
           border: 1px solid $shoreBlue;
-          border-radius: 8px;
-          font-family: "Inter";
+          border-radius: 0.5rem;
+          font-family: "Inter", sans-serif;
           box-sizing: border-box;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            outline: none;
+            border-color: color.scale($shoreBlue, $lightness: -20%);
+            box-shadow: 0 0 0 2px rgba($shoreBlue, 0.2);
+          }
 
           &::placeholder {
-            color: lighten($navBlue, 30%);
+            color: color.mix(white, $navBlue, 70%);
           }
         }
       }
@@ -56,12 +64,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 25px;
+        margin-bottom: 1.5625rem;
 
         .rememberMe {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 0.5rem;
 
           input {
             margin: 0;
@@ -78,8 +86,10 @@
           color: $navBlue;
           text-decoration: none;
           font-weight: 500;
+          transition: color 0.2s ease;
 
           &:hover {
+            color: color.scale($navBlue, $lightness: -20%);
             text-decoration: underline;
           }
         }
@@ -90,22 +100,27 @@
         background-color: $shoreBlue;
         color: white;
         border: none;
-        padding: 14px;
-        border-radius: 8px;
-        font-family: "Inter";
+        padding: 0.875rem;
+        border-radius: 0.5rem;
+        font-family: "Inter", sans-serif;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1rem;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: all 0.3s ease;
 
         &:hover {
-          background-color: darken($navBlue, 10%);
-          color: $shoreBlue;
+          background-color: color.scale($shoreBlue, $lightness: -10%);
+          transform: translateY(-1px);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+          transform: translateY(0);
         }
       }
 
       .signupPrompt {
-        margin-top: 20px;
+        margin-top: 1.25rem;
         text-align: center;
         color: $shoreBlue;
 
@@ -113,8 +128,10 @@
           color: $shoreBlue;
           font-weight: 600;
           text-decoration: none;
+          transition: color 0.2s ease;
 
           &:hover {
+            color: color.scale($shoreBlue, $lightness: -20%);
             text-decoration: underline;
           }
         }
@@ -129,20 +146,20 @@
   // Responsive Adjustments
   @media (min-width: $breakMobile) {
     .loginFormSection {
-      padding-top: 100px;
-      padding-bottom: 50px;
+      padding-top: 6.25rem;
+      padding-bottom: 3.125rem;
     }
   }
 
   @media (min-width: $breakLargeMobile) {
     .loginFormSection {
-      padding-top: 150px;
+      padding-top: 9.375rem;
     }
   }
 
   @media (min-width: $breakTablet) {
     .loginFormSection {
-      padding-top: 180px;
+      padding-top: 11.25rem;
     }
 
     .footerImage {
@@ -151,34 +168,34 @@
       position: relative;
 
       .mazeWrap {
-        width: 250px;
-        height: 250px;
+        width: 15.625rem;
+        height: 15.625rem;
       }
     }
   }
 
   @media (min-width: $breakDesktop) {
     .loginFormSection {
-      padding-top: 250px;
+      padding-top: 15.625rem;
     }
 
     .footerImage {
       .mazeWrap {
-        width: 350px;
-        height: 350px;
+        width: 21.875rem;
+        height: 21.875rem;
       }
     }
   }
 
   @media (min-width: $breakHd) {
     .loginFormSection {
-      padding-top: 350px;
+      padding-top: 21.875rem;
     }
 
     .footerImage {
       .mazeWrap {
-        width: 350px;
-        height: 350px;
+        width: 21.875rem;
+        height: 21.875rem;
       }
     }
   }

@@ -4,7 +4,7 @@
 
 .about {
   @include layout.containerResponsiveNew($containerFull: false);
-  font-family: "Inter";
+
   .heroContainer {
     display: flex;
     position: relative;
@@ -12,6 +12,10 @@
       display: none;
       position: absolute;
     }
+  }
+
+  & {
+    font-family: "Inter";
   }
 
   .chooseUs {
@@ -95,7 +99,7 @@
   @media (min-width: $breakTablet) {
     .heroContainer {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
 
       .heroImageContainer {
         display: block;
@@ -125,7 +129,7 @@
   @media (min-width: $breakDesktop) {
     .heroContainer {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
 
       .heroImageContainer {
         display: block;

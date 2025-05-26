@@ -12,7 +12,6 @@ import {
 interface ThemeContextValue {
   navDrawOpen: boolean;
   setNavDrawOpen: Dispatch<SetStateAction<boolean>>;
-  // ... other context values if needed
 }
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);

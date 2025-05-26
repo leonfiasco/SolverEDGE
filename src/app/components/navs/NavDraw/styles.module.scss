@@ -10,24 +10,22 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%; // Adjust width as needed
-  max-width: 400px;
+  width: 100%; // Adjust width as needed
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: white;
   z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   display: block; // Ensure it's always in document flow
-  border: 2px solid red; // Test border
 
   &.open {
     transform: translateX(0);
   }
 
   .navWrap {
-    padding: 2rem;
     height: 100%;
-    overflow-y: auto;
+    display: flex;
+    align-items: center;
   }
 }
 // .isActive {
@@ -89,6 +87,9 @@
 // Desktop
 // ==========================================================================
 @media (min-width: $breakDesktop) {
+  .navDraw {
+    display: none;
+  }
   // .isActive {
   //   .navWrap {
   //     width: 415px;

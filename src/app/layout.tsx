@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import "./globals.scss";
-import { SiteFooter, SiteHeader } from "./components";
+import { NavDraw, SiteFooter, SiteHeader } from "./components";
 import { ThemeProvider } from "./store/ThemeContext"; // Adjust the import path as needed
 
 import { Inter } from "next/font/google";
@@ -39,6 +39,7 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ThemeProvider>
           <SiteHeader />
+          <NavDraw />
           {children}
           <SiteFooter />
         </ThemeProvider>

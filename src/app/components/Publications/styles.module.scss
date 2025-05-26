@@ -4,8 +4,11 @@
 
 .publications {
   @include layout.containerResponsiveNew($containerFull: false);
-  font-family: "Inter";
-  color: $navBlue;
+
+  & {
+    font-family: "Inter";
+    color: $navBlue;
+  }
   .year {
     font-weight: 700;
   }

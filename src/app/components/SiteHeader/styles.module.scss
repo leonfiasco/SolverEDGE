@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../../styles/base/variables" as *;
 @use "../../styles/mixins/layout" as layout;
 
@@ -5,7 +7,7 @@
   width: 100%;
   background-color: white;
   position: relative;
-  z-index: 1000;
+  z-index: 1100;
   overflow-x: hidden; // Prevents horizontal scrolling
 }
 
@@ -24,7 +26,7 @@
     display: flex;
     align-items: center;
     flex-shrink: 0; // Prevents logo from shrinking
-
+    z-index: 1101;
     .logoLink {
       display: flex;
       align-items: center;
@@ -79,11 +81,12 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: darken($navBlue, 10%);
+          color: color.adjust($navBlue, $lightness: -10%);
         }
 
         &.active {
-          color: darken($navBlue, 20%);
+          color: color.adjust($navBlue, $lightness: -20%);
+
           font-weight: 500;
         }
       }
@@ -95,7 +98,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: darken($navBlue, 10%);
+          color: color.adjust($navBlue, $lightness: -10%);
         }
       }
 
