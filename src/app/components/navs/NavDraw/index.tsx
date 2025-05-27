@@ -8,10 +8,7 @@ const NavDraw = () => {
   const { navDrawOpen } = useThemeContext();
 
   return (
-    <div
-      className={`${styles.navDraw} ${navDrawOpen ? styles.open : ""}`}
-      style={{ border: "2px solid red" }} // Temporary test border
-    >
+    <div className={`${styles.navDraw} ${navDrawOpen ? styles.open : ""}`}>
       <div className={styles.navWrap}>
         <Navigation />
       </div>

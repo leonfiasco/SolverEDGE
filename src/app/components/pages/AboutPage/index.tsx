@@ -15,7 +15,6 @@ import {
 } from "../..";
 import { KID_IMAGE } from "@/utils/images";
 
-// Animation variants
 const container = {
   hidden: { opacity: 0 },
   visible: {
