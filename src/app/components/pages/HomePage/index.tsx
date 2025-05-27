@@ -52,13 +52,17 @@ export default function Home() {
           isBtn
           btnText={"get started"}
         />
-        <div className={styles.heroImageContainer}>
+        <motion.div
+          className={styles.heroImageContainer}
+          whileHover={{ scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 400 }}
+        >
           <HeroImage
             image={HERO_IMAGE}
             imgDescription="Thinking man image"
             withSvg
           />
-        </div>
+        </motion.div>
       </motion.section>
 
       {/* Video Section - Preserving all original structure */}

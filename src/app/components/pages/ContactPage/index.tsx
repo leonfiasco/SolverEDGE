@@ -119,6 +119,8 @@ const Contact = () => {
         <motion.div
           className={styles.heroImageContainer}
           variants={itemVariants}
+          whileHover={{ scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 400 }}
         >
           <HeroImage
             image={CONTACT}
