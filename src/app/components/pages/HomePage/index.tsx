@@ -21,7 +21,6 @@ import Image from "next/image";
 
 import styles from "./page.module.scss";
 
-// Minimal animation variants
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },

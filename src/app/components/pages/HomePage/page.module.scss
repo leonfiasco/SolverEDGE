@@ -1,4 +1,3 @@
-// @use "sass:map";
 @use "../../../styles/base/variables.scss" as *;
 @use "../../../styles/mixins/layout" as layout;
 @use "../../../styles/base/variables" as var;
@@ -10,7 +9,6 @@
   .heroSection {
     position: relative;
     .heroImageContainer {
-      // display: none;
       position: absolute;
       top: 0;
       right: 0;
@@ -21,17 +19,17 @@
     @include layout.containerResponsiveNew($containerFull: false);
     .heroTextWrap {
       .title {
-        white-space: nowrap; // Prevent line breaks
+        white-space: nowrap;
         display: flex;
-        flex-wrap: wrap; // Allow wrapping if needed
-        align-items: baseline; // Align text baselines
+        flex-wrap: wrap;
+        align-items: baseline;
         color: $navBlue;
         font-family: "Inter";
         font-weight: 700;
         .inlineBlock {
           display: inline-block;
-          white-space: normal; // Allow text wrapping inside these spans
-          font-family: inherit; // Inherits from .title
+          white-space: normal;
+          font-family: inherit;
           font-weight: inherit;
           .underlinedWord {
             position: relative;
@@ -39,7 +37,7 @@
 
             .underlineSvg {
               position: absolute;
-              bottom: 0px; // Adjust underline position
+              bottom: 0px;
               left: 0;
               width: 100%;
               height: auto;
@@ -49,7 +47,7 @@
 
         .underlineContainer {
           display: inline-flex;
-          gap: 0.25em; // Small gap between words
+          gap: 0.25em;
 
           .underlinedWord {
             position: relative;
@@ -57,7 +55,7 @@
 
             .underlineSvg {
               position: absolute;
-              bottom: 0px; // Adjust underline position
+              bottom: 0px;
               left: 0;
               width: 100%;
               height: auto;
@@ -69,7 +67,6 @@
     .secondSubTxt {
       position: relative;
       .arrowSquiggle {
-        // display: none;
         position: absolute;
       }
       p {
@@ -103,21 +100,21 @@
       padding-top: 70px;
       padding-bottom: 30px;
       .title {
-        white-space: nowrap; // Prevent line breaks
+        white-space: nowrap;
         display: flex;
-        flex-wrap: wrap; // Allow wrapping if needed
-        align-items: baseline; // Align text baselines
+        flex-wrap: wrap;
+        align-items: baseline;
 
         .inlineBlock {
           display: inline-block;
-          white-space: normal; // Allow text wrapping inside these spans
+          white-space: normal;
           .underlinedWord {
             position: relative;
             display: inline-block;
 
             .underlineSvg {
               position: absolute;
-              bottom: -4px; // Adjust underline position
+              bottom: -4px;
               left: 0;
               width: 100%;
               height: auto;
@@ -127,7 +124,7 @@
 
         .underlineContainer {
           display: inline-flex;
-          gap: 0.25em; // Small gap between words
+          gap: 0.25em;
 
           .underlinedWord {
             position: relative;
@@ -135,7 +132,7 @@
 
             .underlineSvg {
               position: absolute;
-              bottom: -4px; // Adjust underline position
+              bottom: -4px;
               left: 0;
               width: 100%;
               height: auto;
@@ -167,18 +164,17 @@
     .graphImages {
       display: flex;
       flex-direction: column;
-      gap: 2rem; // Space between images
+      gap: 2rem;
       width: 100%;
 
       .test {
-        position: relative; // Required for Next.js Image fill
-        width: 100%; // Take full available width
-        height: 0; // Let padding control height
-        padding-bottom: 30%; // Aspect ratio (adjust as needed)
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 30%;
 
-        // For graphImage2 (taller aspect ratio)
         &:nth-child(2) {
-          padding-bottom: 60%; // Different aspect ratio
+          padding-bottom: 60%;
         }
       }
 

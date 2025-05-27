@@ -38,7 +38,6 @@
     flex-direction: column;
   }
 
-  // Responsive Adjustments
   @media (min-width: $breakMobile) {
     .heroContainer {
       padding-bottom: 70px;
@@ -142,7 +141,6 @@
       .textWrap {
         p {
           width: 820px;
-          // @include item-type-setting(16, 20, 0);
         }
       }
     }

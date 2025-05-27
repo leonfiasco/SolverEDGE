@@ -15,11 +15,11 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    padding-bottom: 4px; /* Space for underline */
-    color: $navBlue; /* Text color */
+    padding-bottom: 4px;
+    color: $navBlue;
   }
   .subText {
-    color: $navBlue; /* Text color */
+    color: $navBlue;
     font-family: "Inter";
     font-weight: 400;
   }
@@ -27,7 +27,7 @@
 
 .underlineContainer {
   display: inline-flex;
-  gap: 0.5em; // Space between words
+  gap: 0.5em;
 }
 
 .underlinedWord {
@@ -36,11 +36,11 @@
 
   .underlineSvg {
     position: absolute;
-    bottom: -2px; // Closer to text
+    bottom: -2px;
     left: 0;
-    width: 100%; // Scale with parent width
-    height: auto; // Maintain aspect ratio
-    min-height: 8px; // Fallback minimum
+    width: 100%;
+    height: auto;
+    min-height: 8px;
   }
 }
 
@@ -78,18 +78,16 @@
     }
 
     .underlineSvg {
-      bottom: -5px; // Adjust based on your SVG height
+      bottom: -5px;
       left: 0;
       width: 100%;
-      // height: 17px;
     }
 
     &.login {
       .underlineSvg {
-        bottom: -15px; // Adjust based on your SVG height
+        bottom: -15px;
         left: 0;
         width: 100%;
-        // height: 17px;
       }
     }
   }
@@ -152,10 +150,9 @@
 
     &.login {
       .underlineSvg {
-        bottom: -24px; // Adjust based on your SVG height
+        bottom: -24px;
         left: 0;
         width: 100%;
-        // height: 17px;
       }
     }
   }

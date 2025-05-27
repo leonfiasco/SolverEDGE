@@ -7,7 +7,6 @@ import Image from "next/image";
 import { BOOKS, MAZE } from "@/utils/images";
 import styles from "./styles.module.scss";
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

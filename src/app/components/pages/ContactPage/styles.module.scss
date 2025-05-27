@@ -92,14 +92,13 @@
     }
   }
 
-  // Responsive Adjustments
   @media (min-width: $breakMobile) {
     .contactMethods {
       padding-top: 110px;
 
       .methodsGrid {
         .methodCard {
-          grid-column: span 12; // 2 columns on mobile (2x6=12)
+          grid-column: span 12;
         }
       }
     }

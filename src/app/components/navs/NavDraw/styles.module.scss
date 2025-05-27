@@ -1,22 +1,17 @@
-@use "../../../styles/base/variables" as *; // Global namespace
-@use "../../../styles/mixins/layout" as layout; // Namespaced
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/mixins/layout" as layout;
 
-// .sideNav {
-//   display: none;
-// }
-
-// styles.module.scss for NavDraw
 .navDraw {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%; // Adjust width as needed
+  width: 100%;
   height: 100vh;
   background: white;
   z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
-  display: block; // Ensure it's always in document flow
+  display: block;
 
   &.open {
     transform: translateX(0);
@@ -28,35 +23,12 @@
     align-items: center;
   }
 }
-// .isActive {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: absolute;
-//   z-index: 100;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   background-color: #111;
-//   overflow-x: hidden;
-//   transition: 0.5s;
-// }
 
 // ==========================================================================
 // Default
 // ==========================================================================
 
 @media (min-width: $breakMobile) {
-  // .isActive {
-  //   .navWrap {
-  //     display: flex;
-  //     justify-content: center;
-  //     position: relative;
-  //     width: 200px;
-  //     height: 450px;
-  //   }
-  // }
 }
 
 // ==========================================================================
@@ -64,11 +36,6 @@
 // ==========================================================================
 
 @media (min-width: $breakLargeMobile) {
-  // .isActive {
-  //   .navWrap {
-  //     width: 265px;
-  //   }
-  // }
 }
 
 // ==========================================================================
@@ -76,11 +43,6 @@
 // ==========================================================================
 
 @media (min-width: $breakTablet) {
-  // .isActive {
-  //   .navWrap {
-  //     width: 385px;
-  //   }
-  // }
 }
 
 // ==========================================================================
@@ -90,20 +52,10 @@
   .navDraw {
     display: none;
   }
-  // .isActive {
-  //   .navWrap {
-  //     width: 415px;
-  //   }
-  // }
 }
 
 // ==========================================================================
 // HD
 // ==========================================================================
 @media (min-width: $breakHd) {
-  // .isActive {
-  //   .navWrap {
-  //     width: 555px;
-  //   }
-  // }
 }

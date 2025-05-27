@@ -11,7 +11,6 @@ export const metadata = {
   description: "Get in touch with the SolverEDGE team",
 };
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
