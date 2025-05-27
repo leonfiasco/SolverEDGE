@@ -79,12 +79,12 @@ const Contact = () => {
     },
     {
       type: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+85266235524",
       icon: "📞",
     },
     {
       type: "Address",
-      value: "123 Education St, Melbourne, Australia",
+      value: "Kwai Hung Holdings Centre, 89 King's Road, Causeway",
       icon: "📍",
     },
     {
