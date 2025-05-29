@@ -12,6 +12,7 @@ import ValueCards from "./ValueCards";
 import Partners from "./Partners";
 import Publications from "./Publications";
 import CurriculumList from "./CurriculumList";
+import Alert from "./Alert";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -19,8 +20,6 @@ import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import CurriculumPage from "./pages/CurriculumPage";
 import ContactPage from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
 
 // SVGs
 import Cross from "./svgs/Cross";
@@ -55,14 +54,13 @@ export {
   Publications,
   Partners,
   CurriculumList,
+  Alert,
   // Page
   HomePage,
   AboutPage,
   ProductPage,
   CurriculumPage,
   ContactPage,
-  LoginPage,
-  SignupPage,
 
   // SVGs
   Cross,

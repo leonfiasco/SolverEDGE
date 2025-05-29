@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation"; // Note: In Next.js 13+, it's 'next/navigation' not 'next/router'
 import { Button, Underline } from "../index";
 import styles from "./styles.module.scss";
 
@@ -10,7 +13,8 @@ type props = {
   isSubText: boolean;
   btnText?: string;
   isBtn?: boolean;
-  variant?: string; // Add variant prop
+  variant?: string;
+  btnLink?: string; // Add a new prop for the link
 };
 
 const HeroText = ({
@@ -22,8 +26,17 @@ const HeroText = ({
   isSubText,
   btnText,
   isBtn,
-  variant = "default", // Default variant
+  btnLink, // Default to contact page
+  variant = "default",
 }: props) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (btnLink) {
+      router.push(btnLink);
+    }
+  };
+
   return (
     <div className={`${styles.heroTextWrap} ${styles[variant]}`}>
       <h1 className={styles.title}>
@@ -49,7 +62,7 @@ const HeroText = ({
         <span className={styles.titleLine}>{secondText}</span>
       </h1>
       {isSubText && <p className={styles.subText}>{subText}</p>}
-      {isBtn && <Button text={`${btnText}`} />}
+      {isBtn && <Button text={`${btnText}`} onClick={handleClick} />}
     </div>
   );
 };

@@ -102,7 +102,10 @@ const SiteHeader = (): JSX.Element => {
             </Link>
           </li>
           <li className={styles.navItem} role="none">
-            <Link href="/login" className={styles.profileLink}>
+            <Link
+              href="https://problemsolving.solveredge.com/"
+              className={styles.profileLink}
+            >
               <FontAwesomeIcon
                 icon={faCircleUser}
                 size="lg"

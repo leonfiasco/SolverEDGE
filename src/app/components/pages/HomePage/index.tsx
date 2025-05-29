@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import {
   ArrowDown,
   Button,
@@ -32,6 +33,10 @@ const slideUp = {
 };
 
 export default function Home() {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("https://problemsolving.solveredge.com/");
+  };
   return (
     <main className={styles.home}>
       {/* Hero Section - Only adding fade animation */}
@@ -51,6 +56,7 @@ export default function Home() {
           subText={"Individualised Learning Platform"}
           isBtn
           btnText={"get started"}
+          btnLink="/contact"
         />
         <motion.div
           className={styles.heroImageContainer}
@@ -134,7 +140,7 @@ export default function Home() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <Button text="start training" />
+            <Button text="start training" onClick={handleClick} />
           </motion.div>
         </div>
 

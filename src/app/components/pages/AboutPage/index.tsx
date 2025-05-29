@@ -58,6 +58,7 @@ export default function About() {
           }
           isBtn
           btnText={"explore courses"}
+          btnLink="https://problemsolving.solveredge.com/"
         />
         <motion.div
           className={styles.heroImageContainer}

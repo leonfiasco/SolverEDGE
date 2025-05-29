@@ -1,15 +1,18 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
-import { HeroText, HeroImage, SectionHeading, Button } from "../..";
+
+import { HeroText, HeroImage, SectionHeading } from "../..";
 import { CONTACT } from "@/utils/images";
 import styles from "./styles.module.scss";
 
-export const metadata = {
-  title: "Contact | SolverEDGE",
-  description: "Get in touch with the SolverEDGE team",
-};
+interface ContactMethod {
+  type: string;
+  value: string;
+  icon: string;
+  link?: string;
+  href?: string;
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,45 +50,25 @@ const cardVariants = {
   }),
 };
 
-const formVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const formItemVariants = {
-  hidden: { x: -10, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
-
 const Contact = () => {
-  const contactMethods = [
+  const contactMethods: ContactMethod[] = [
     {
       type: "Email",
       value: "info@solveredge.com",
       icon: "✉️",
+      href: `mailto:info@solveredge.com`,
     },
     {
       type: "Phone",
       value: "+85266235524",
       icon: "📞",
+      href: `tel:+85266235524`,
     },
     {
       type: "Address",
       value: "Kwai Hung Holdings Centre, 89 King's Road, Causeway",
       icon: "📍",
+      link: "https://maps.google.com/?q=Kwai+Hung+Holdings+Centre,+89+King's+Road,+Causeway",
     },
     {
       type: "Social",
@@ -150,6 +133,13 @@ const Contact = () => {
               variants={cardVariants}
               custom={index}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              onClick={() => {
+                if (method.link) window.open(method.link, "_blank");
+                if (method.href) window.location.href = method.href;
+              }}
+              style={{
+                cursor: method.link || method.href ? "pointer" : "default",
+              }}
             >
               <span className={styles.icon}>{method.icon}</span>
               <h3>{method.type}</h3>
@@ -157,43 +147,6 @@ const Contact = () => {
             </motion.div>
           ))}
         </motion.div>
-      </motion.section>
-
-      <motion.section
-        className={styles.formSection}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={formVariants}
-      >
-        <motion.div variants={itemVariants}>
-          <SectionHeading title={"Send a Message"} diamond />
-        </motion.div>
-
-        <motion.form className={styles.contactForm} variants={formVariants}>
-          <motion.div className={styles.formGroup} variants={formItemVariants}>
-            <input type="text" id="name" placeholder="Name..." required />
-          </motion.div>
-          <motion.div className={styles.formGroup} variants={formItemVariants}>
-            <input type="email" id="email" placeholder="Email..." required />
-          </motion.div>
-          <motion.div className={styles.formGroup} variants={formItemVariants}>
-            <textarea
-              id="message"
-              rows={5}
-              required
-              placeholder="Message..."
-            ></textarea>
-          </motion.div>
-          <motion.div
-            className={styles.submitButton}
-            variants={formItemVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button text={"Send Message"} />
-          </motion.div>
-        </motion.form>
       </motion.section>
     </motion.main>
   );

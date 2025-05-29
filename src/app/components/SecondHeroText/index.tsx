@@ -1,4 +1,7 @@
+"use client";
+
 import { Button, Underline } from "../index";
+import { useRouter } from "next/navigation";
 
 import styles from "./styles.module.scss";
 
@@ -8,7 +11,8 @@ interface AIPoweredTextProps {
   suffixText?: string;
   description?: string;
   showButton?: boolean;
-  buttonText?: string;
+  btnText?: string;
+  btnLink?: string;
 }
 
 const SecondHeroText = ({
@@ -17,8 +21,16 @@ const SecondHeroText = ({
   suffixText = "Training for All Learners",
   description = "SolverEDGE is an AI-powered learning platform that enhances problem-solving skills for students and adults. Developed with University of Melbourne research, it diagnoses behavioral traits and personalizes training to improve individual capabilities.",
   showButton = true,
-  buttonText = "start training",
+  btnLink,
+  btnText = "start training",
 }: AIPoweredTextProps) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (btnLink) {
+      router.push(btnLink);
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.heroTextWrap}>
@@ -47,7 +59,7 @@ const SecondHeroText = ({
           <p>{description}</p>
           {showButton && (
             <div className={styles.btnWrap}>
-              <Button text={buttonText} />
+              <Button text={`${btnText}`} onClick={handleClick} />
             </div>
           )}
         </div>
