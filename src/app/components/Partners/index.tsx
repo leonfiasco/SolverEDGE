@@ -2,12 +2,13 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import { ANTHONY, CYBER, NORTH } from "../../../utils/images";
 
 const Partners = () => {
   const partners = [
-    { src: "/images/anthony.png", alt: "Anthony Logo" },
-    { src: "/images/cyberport.png", alt: "Cyberport Logo" },
-    { src: "/images/north-shore.png", alt: "North Shore Logo" },
+    { src: ANTHONY, alt: "Anthony Logo" },
+    { src: CYBER, alt: "Cyberport Logo" },
+    { src: NORTH, alt: "North Shore Logo" },
   ];
 
   return (

@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import BurgerMenu from "./BurgerMenu";
 import styles from "./styles.module.scss";
+import { LOGO } from "@/utils/images";
 
 const SiteHeader = (): JSX.Element => {
   const { navDrawOpen, setNavDrawOpen } = useThemeContext();
@@ -28,7 +29,7 @@ const SiteHeader = (): JSX.Element => {
             aria-label="SolverEDGE Home"
           >
             <Image
-              src="/images/logo.webp"
+              src={LOGO}
               alt="SolverEDGE Logo"
               width={172}
               height={94}

@@ -1,5 +1,5 @@
 export const GRAPH_IMAGE1 = "/images/graph1.png";
-export const GRAPH_IMAGE2 = "/images/graph2.svg";
+export const GRAPH_IMAGE2 = "/images/graph2.png";
 export const HERO_IMAGE = "/images/thinkingMan.svg";
 export const HIGH_FIVE = "/images/high-five.svg";
 export const KID_IMAGE = "/images/kid-img.svg";
@@ -9,3 +9,7 @@ export const BOOKS = "/images/books.svg";
 export const MAZE = "/images/maze.svg";
 export const CONTACT = "/images/contact.svg";
 export const LOGIN = "/images/login.svg";
+export const ANTHONY = "/images/anthony.png";
+export const CYBER = "/images/cyberport.png";
+export const NORTH = "/images/north-shore.png";
+export const LOGO = "/images/logo.jpg";

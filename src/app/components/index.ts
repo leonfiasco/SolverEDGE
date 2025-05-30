@@ -12,7 +12,6 @@ import ValueCards from "./ValueCards";
 import Partners from "./Partners";
 import Publications from "./Publications";
 import CurriculumList from "./CurriculumList";
-import Alert from "./Alert";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -54,7 +53,6 @@ export {
   Publications,
   Partners,
   CurriculumList,
-  Alert,
   // Page
   HomePage,
   AboutPage,
